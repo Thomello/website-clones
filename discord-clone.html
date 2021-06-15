@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>Discord Clone - Tailwind</title>
+</head>
+<body>
+    <div class="flex">
+        <div class=" bg-gray-900 w-20 flex-none flex flex-col min-h-screen h-screen px-2 py-2">
+          <div class="channel-bar overflow-y-auto">
+            <ul class="text-center">
+              <li> 
+                <svg width="55" height="55" class="w-12 h-12 rounded-full mx-auto" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="55" height="55" fill="#2E3136"/>
+                  <path d="M38.3333 19.5C38.3333 19.5 35.0849 16.9571 31.25 16.6667L30.9043 17.3587C34.3709 18.208 35.9618 19.4221 37.625 20.9167C34.7584 19.4533 31.93 18.0833 27 18.0833C22.07 18.0833 19.2416 19.4533 16.375 20.9167C18.0382 19.4221 19.9308 18.072 23.0957 17.3587L22.75 16.6667C18.7267 17.0456 15.6667 19.5 15.6667 19.5C15.6667 19.5 12.0393 24.7601 11.4167 35.0833C15.0717 39.3 20.625 39.3333 20.625 39.3333L21.7867 37.7863C19.8147 37.1007 17.5905 35.8774 15.6667 33.6667C17.9603 35.4021 21.4219 37.2083 27 37.2083C32.5781 37.2083 36.0398 35.4021 38.3333 33.6667C36.4102 35.8774 34.186 37.1007 32.2133 37.7863L33.375 39.3333C33.375 39.3333 38.9283 39.3 42.5833 35.0833C41.9607 24.7601 38.3333 19.5 38.3333 19.5ZM22.3958 32.25C21.0259 32.25 19.9167 30.9821 19.9167 29.4167C19.9167 27.8512 21.0259 26.5833 22.3958 26.5833C23.7658 26.5833 24.875 27.8512 24.875 29.4167C24.875 30.9821 23.7658 32.25 22.3958 32.25ZM31.6042 32.25C30.2343 32.25 29.125 30.9821 29.125 29.4167C29.125 27.8512 30.2343 26.5833 31.6042 26.5833C32.9741 26.5833 34.0833 27.8512 34.0833 29.4167C34.0833 30.9821 32.9741 32.25 31.6042 32.25Z" fill="white"/>
+                  </svg>
+                </li>
+              <li class="border-b border-gray-700 mx-4 mt-3"></li>
+              <li class="mt-3">
+                
+                <svg width="55" height="55"  class="w-12 h-12 rounded-full mx-auto" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="55" height="55" fill="#FB503B"/>
+                  <path d="M46.8503 26.145C46.5946 25.8629 43.1205 21.508 42.5032 20.7675C41.886 20.027 41.595 20.1593 41.2159 20.221C40.8367 20.2827 36.4367 21.0144 35.9253 21.1025C35.4139 21.1907 35.0964 21.3934 35.405 21.8342C35.6872 22.2221 38.5794 26.3301 39.2143 27.2293L27.7072 29.9885L18.5722 14.6936C18.2106 14.1559 18.1313 13.962 17.3024 14.006C16.4736 14.0413 10.1248 14.5702 9.67515 14.6055C9.22545 14.6408 8.72284 14.8435 9.18136 15.9102C9.63106 16.9769 16.8439 32.5098 17.0467 32.9593C17.2495 33.4089 17.7697 34.1406 18.9954 33.8497C20.2475 33.55 24.5946 32.4128 26.9665 31.7957C28.2187 34.0701 30.7846 38.6718 31.2519 39.3329C31.8868 40.2145 32.3189 40.0646 33.2888 39.7737C34.0471 39.5445 45.1397 35.5599 45.6423 35.3483C46.1449 35.1456 46.4535 34.9957 46.1097 34.4932C45.8628 34.123 42.9353 30.2089 41.401 28.1549C42.4503 27.8728 46.1802 26.8855 46.5858 26.7709C47.0443 26.6563 47.106 26.4271 46.8503 26.145ZM25.9349 30.4205C25.7938 30.4469 19.3569 31.9896 19.013 32.069C18.6691 32.1483 18.6691 32.1042 18.6339 31.9896C18.5986 31.875 10.9713 16.157 10.8655 15.9631C10.7597 15.7691 10.7685 15.6105 10.8655 15.6105C10.9625 15.6105 16.9497 15.0727 17.1613 15.0639C17.373 15.0551 17.3465 15.0992 17.4259 15.2314C17.4259 15.2314 25.8643 29.7946 26.0142 30.0502C26.1641 30.3147 26.076 30.394 25.9349 30.4205ZM44.1081 33.8233C44.2139 33.9819 44.3109 34.0877 43.9934 34.2023C43.6672 34.3169 33.086 37.8872 32.8832 37.9754C32.6804 38.0635 32.5128 38.09 32.2483 37.7109C31.9838 37.3318 28.5449 31.3726 28.5449 31.3726L39.761 28.4546C40.0431 28.3665 40.1313 28.3048 40.3076 28.5869C40.484 28.869 44.0022 33.6646 44.1081 33.8233ZM44.8223 25.8629C44.5666 25.9158 40.4487 26.9384 40.4487 26.9384L37.0804 22.319C36.9834 22.1868 36.904 22.0546 37.1421 22.0193C37.3802 21.9841 41.207 21.2965 41.3746 21.2612C41.5509 21.2259 41.7008 21.173 41.9125 21.4639C42.1241 21.7549 45.0339 25.4397 45.1485 25.5808C45.2632 25.7218 45.078 25.81 44.8223 25.8629Z" fill="#3A3A3A"/>
+                  </svg> </li>
+              <li class="mt-3">
+                <svg width="55"class="w-12 h-12 rounded-full mx-auto"  height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="55" height="55" fill="white"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M27 39.8655C21.6667 39.8655 18.3333 37.2138 17 31.9103C19 34.562 21.3333 35.5564 24 34.8935C25.5215 34.5152 26.6089 33.4176 27.8127 32.2026C29.7736 30.2234 32.043 27.9327 37 27.9327C42.3333 27.9327 45.6667 30.5844 47 35.8879C45 33.2362 42.6667 32.2418 40 32.9047C38.4785 33.2829 37.391 34.3806 36.1873 35.5956C34.2264 37.5748 31.957 39.8655 27 39.8655ZM17 27.9328C11.6667 27.9328 8.33333 25.2811 7 19.9776C9 22.6293 11.3333 23.6237 14 22.9608C15.5215 22.5826 16.609 21.4849 17.8127 20.2699C19.7736 18.2907 22.043 16 27 16C32.3333 16 35.6667 18.6517 37 23.9552C35 21.3035 32.6667 20.3091 30 20.972C28.4785 21.3503 27.3911 22.4479 26.1873 23.6629C24.2264 25.6421 21.957 27.9328 17 27.9328Z" fill="url(#paint0_linear)"/>
+                  <defs>
+                  <linearGradient id="paint0_linear" x1="-0.2" y1="35.5697" x2="5.33502" y2="9.80013" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#2383AE"/>
+                  <stop offset="1" stop-color="#6DD7B9"/>
+                  </linearGradient>
+                  </defs>
+                  </svg>
+                   
+              </li>
+              <li class="mt-3">
+                <svg width="55" class="w-12 h-12 rounded-full mx-auto" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="55" height="55" fill="#C4E7D7"/>
+                  <path d="M37.36 14H44.2L27.1 43.773L10 14H16.7545H23.0815L27.1 20.9039L31.033 14H37.36Z" fill="#41B883"/>
+                  <path d="M10 14L27.1 43.773L44.2 14H37.36L27.1 31.8638L16.7545 14H10Z" fill="#41B883"/>
+                  <path d="M16.7545 14L27.1 31.9501L37.36 14H31.033L27.1 20.9039L23.0815 14H16.7545Z" fill="#35495E"/>
+                  </svg>
+                   
+              </li>
+              <li class="mt-3">
+                <a href="#" class="w-12 h-12 bg-gray-800 hover:bg-teal-500 text-teal-500 hover:text-white inline-block rounded-full">
+                  <svg fill="currentColor" class="mt-3 mx-auto" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                </a>
+              </li>
+              <li class="mt-2">
+                <a href="#" class="w-12 h-12 bg-gray-800 hover:bg-teal-500 text-teal-500 hover:text-white inline-block rounded-full">
+                  <svg fill="currentColor" class="mt-3 mx-auto" viewBox="0 0 24 24" width="24" height="24"><path class="heroicon-ui" d="M16.32 14.9l5.39 5.4a1 1 0 0 1-1.42 1.4l-5.38-5.38a8 8 0 1 1 1.41-1.41zM10 16a6 6 0 1 0 0-12 6 6 0 0 0 0 12z"></path></svg>
+                </a>
+              </li>
+              <li class="border-b border-gray-700 mx-4 mt-3"></li>
+              <li class="mt-3">
+                <a href="#" class="w-12 h-12 bg-gray-800 hover:bg-teal-500 text-teal-500 hover:text-white inline-block rounded-full">
+                  <svg fill="currentColor" class="mt-3 mx-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path class="heroicon-ui" d="M11 14.59V3a1 1 0 0 1 2 0v11.59l3.3-3.3a1 1 0 0 1 1.4 1.42l-5 5a1 1 0 0 1-1.4 0l-5-5a1 1 0 0 1 1.4-1.42l3.3 3.3zM3 17a1 1 0 0 1 2 0v3h14v-3a1 1 0 0 1 2 0v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-3z"></path></svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="flex-1 flex flex-col min-h-screen h-screen">
+          <div class="flex text-white h-12">
+            <div class="bg-gray-800 w-56 flex-none flex items-center justify-between border-b border-gray-900 px-3 py-2">
+              <div>Tailwind CSS</div>
+              <button>
+                <svg fill="currentColor" viewBox="0 0 24 24" width="24" height="24"><path class="heroicon-ui" d="M15.3 9.3a1 1 0 0 1 1.4 1.4l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 1.4-1.4l3.3 3.29 3.3-3.3z"></path></svg>
+              </button>
+            </div>
+            <div class="flex-1 bg-gray-700 flex items-center justify-between border-b border-gray-900 px-4">
+              <div class="flex items-center">
+                <div class="text-gray-500 text-2xl">#</div>
+                <div class="ml-2 text-sm text-white">general</div>
+                <div class="border-l pl-3 ml-3 border-gray-600 text-xs text-gray-400">general discussion of Tailwind CSS</div>
+              </div>
+              <div class="flex items-center">
+                <a href="#" class="ml-4">
+                  <svg class="w-6 h-6 text-gray-500 hover:text-gray-200" fill="currentColor" width="24" height="24" viewBox="0 0 24 24"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"></path></svg>
+                </a>
+                <a href="#" class="ml-4">
+                  <svg class="w-6 h-6 text-gray-500 hover:text-gray-200" fill="currentColor" viewBox="0 0 24 24"><path class="secondary" d="M2.24 20.35l6.5-7.5a1 1 0 0 1 1.47-.06l1 1a1 1 0 0 1-.06 1.47l-7.5 6.5c-.93.8-2.22-.48-1.4-1.41z"></path><path class="primary" d="M15 15.41V18a1 1 0 0 1-.3.7l-1 1a1 1 0 0 1-1.4 0l-8-8a1 1 0 0 1 0-1.4l1-1A1 1 0 0 1 6 9h2.59L13 4.59V3a1 1 0 0 1 1.7-.7l7 7A1 1 0 0 1 21 11h-1.59L15 15.41z"></path></svg>
+                </a>
+                <a href="#" class="ml-4">
+                  <svg class="w-6 h-6 text-gray-500 hover:text-gray-200" fill="currentColor" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"></path><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"></path></svg>
+                </a>
+                <a href="#" class="ml-4">
+                  <form action="#" class="relative">
+                    <input type="text" placeholder="Search" class="rounded bg-gray-900 text-gray-200 text-xs px-2 py-1">
+                    <span class="absolute right-0 top-0 mr-1" style="top:6px">
+                      <svg class="w-4 h-4 text-gray-500 hover:text-gray-200" fill="currentColor" viewBox="0 0 24 24" width="24" height="24"><path class="heroicon-ui" d="M16.32 14.9l5.39 5.4a1 1 0 0 1-1.42 1.4l-5.38-5.38a8 8 0 1 1 1.41-1.41zM10 16a6 6 0 1 0 0-12 6 6 0 0 0 0 12z"></path></svg>
+                    </span>
+                  </form>
+                </a>
+                <a href="#" class="ml-4">
+                  <svg class="w-6 h-6 text-gray-500 hover:text-gray-200" fill="currentColor" viewBox="0 0 24 24" width="24" height="24"><path class="heroicon-ui" d="M15.6 15.47A4.99 4.99 0 0 1 7 12a5 5 0 0 1 10 0v1.5a1.5 1.5 0 1 0 3 0V12a8 8 0 1 0-4.94 7.4 1 1 0 1 1 .77 1.84A10 10 0 1 1 22 12v1.5a3.5 3.5 0 0 1-6.4 1.97zM12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"></path></svg>
+                </a>
+                <a href="#" class="ml-4">
+                  <svg class="w-6 h-6 text-gray-500 hover:text-gray-200" fill="currentColor" viewBox="0 0 24 24"><g data-name="Layer 2"><g data-name="menu-arrow-circle"><rect width="24" height="24" transform="rotate(180 12 12)" opacity="0"></rect><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 16a1 1 0 1 1 1-1 1 1 0 0 1-1 1zm1-5.16V14a1 1 0 0 1-2 0v-2a1 1 0 0 1 1-1 1.5 1.5 0 1 0-1.5-1.5 1 1 0 0 1-2 0 3.5 3.5 0 1 1 4.5 3.34z"></path></g></g></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="flex-1 flex overflow-y-hidden">
+            <div class="bg-gray-800 w-56 flex-none flex flex-col justify-between">
+              <div class="hashtag-bar text-sm leading-relaxed overflow-y-auto">
+                <ul class="px-2 py-3">
+                  <li class="text-gray-500 px-2 hover:text-gray-200 hover:bg-gray-900">
+                    <a href="#" class="flex items-center">
+                      <span class="text-xl">#</span>
+                      <span class="ml-2">welcome</span>
+                    </a>
+                  </li>
+                  <li class="text-gray-500 px-2 hover:text-gray-200 hover:bg-gray-900">
+                    <a href="#" class="flex items-center">
+                      <span class="text-xl">#</span>
+                      <span class="ml-2">faq</span>
+                    </a>
+                  </li>
+                </ul>
+    
+                <button class="flex items-center text-gray-500 hover:text-gray-200">
+                  <svg fill="currentColor" viewBox="0 0 24 24" width="24" height="24"><path class="heroicon-ui" d="M15.3 9.3a1 1 0 0 1 1.4 1.4l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 1.4-1.4l3.3 3.29 3.3-3.3z"></path></svg>
+                  <h3 class="uppercase tracking-wide font-semibold text-xs">Tailwind CSS</h3>
+                </button>
+    
+                <ul class="px-2 py-3 pt-2">
+                  <li class="text-gray-200 px-2 hover:text-gray-200 hover:bg-gray-900 bg-gray-750 rounded">
+                    <a href="#" class="flex items-center">
+                      <span class="text-xl">#</span>
+                      <span class="ml-2">general</span>
+                    </a>
+                  </li>
+                  <li class="text-gray-200 px-2 hover:text-gray-200 hover:bg-gray-900">
+                    <a href="#" class="flex items-center">
+                      <span class="text-xl">#</span>
+                      <span class="ml-2">core-dev</span>
+                    </a>
+                  </li>
+                  <li class="text-gray-500 px-2 hover:text-gray-200 hover:bg-gray-900">
+                    <a href="#" class="flex items-center">
+                      <span class="text-xl">#</span>
+                      <span class="ml-2">course</span>
+                    </a>
+                  </li>
+                  <li class="text-gray-500 px-2 hover:text-gray-200 hover:bg-gray-900">
+                    <a href="#" class="flex items-center">
+                      <span class="text-xl">#</span>
+                      <span class="ml-2">plugins</span>
+                    </a>
+                  </li>
+                  <li class="text-gray-200 px-2 hover:text-gray-200 hover:bg-gray-900">
+                    <a href="#" class="flex items-center">
+                      <span class="text-xl">#</span>
+                      <span class="ml-2">docs</span>
+                    </a>
+                  </li>
+                  <li class="text-gray-500 px-2 hover:text-gray-200 hover:bg-gray-900">
+                    <a href="#" class="flex items-center">
+                      <span class="text-xl">#</span>
+                      <span class="ml-2">showcase</span>
+                    </a>
+                  </li>
+                  <li class="text-gray-200 px-2 hover:text-gray-200 hover:bg-gray-900">
+                    <a href="#" class="flex items-center">
+                      <span class="text-xl">#</span>
+                      <span class="ml-2">help</span>
+                    </a>
+                  </li>
+                </ul>
+    
+                <button class="flex items-center text-gray-500 hover:text-gray-200">
+                  <svg fill="currentColor" viewBox="0 0 24 24" width="24" height="24"><path class="heroicon-ui" d="M15.3 9.3a1 1 0 0 1 1.4 1.4l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 1.4-1.4l3.3 3.29 3.3-3.3z"></path></svg>
+                  <h3 class="uppercase tracking-wide font-semibold text-xs">Community</h3>
+                </button>
+    
+                <ul class="px-2 py-3 pt-2">
+                  <li class="text-gray-500 px-2 hover:text-gray-200 hover:bg-gray-900">
+                    <a href="#" class="flex items-center">
+                      <span class="text-xl">#</span>
+                      <span class="ml-2">feedback</span>
+                    </a>
+                  </li>
+                  <li class="text-gray-500 px-2 hover:text-gray-200 hover:bg-gray-900">
+                    <a href="#" class="flex items-center">
+                      <span class="text-xl">#</span>
+                      <span class="ml-2">jobs</span>
+                    </a>
+                  </li>
+                </ul>
+    
+                <button class="flex items-center text-gray-500 hover:text-gray-200">
+                  <svg fill="currentColor" viewBox="0 0 24 24" width="24" height="24"><path class="heroicon-ui" d="M15.3 9.3a1 1 0 0 1 1.4 1.4l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 1.4-1.4l3.3 3.29 3.3-3.3z"></path></svg>
+                  <h3 class="uppercase tracking-wide font-semibold text-xs">Off Topic</h3>
+                </button>
+    
+                <ul class="px-2 py-3 pt-2">
+                  <li class="text-gray-500 px-2 hover:text-gray-200 hover:bg-gray-900">
+                    <a href="#" class="flex items-center">
+                      <span class="text-xl">#</span>
+                      <span class="ml-2">design</span>
+                    </a>
+                  </li>
+                  <li class="text-gray-500 px-2 hover:text-gray-200 hover:bg-gray-900">
+                    <a href="#" class="flex items-center">
+                      <span class="text-xl">#</span>
+                      <span class="ml-2">development</span>
+                    </a>
+                  </li>
+                  <li class="text-gray-500 px-2 hover:text-gray-200 hover:bg-gray-900">
+                    <a href="#" class="flex items-center">
+                      <span class="text-xl">#</span>
+                      <span class="ml-2">random</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bg-gray-850 px-3 py-2 flex items-center justify-between">
+                <div class="flex items-center">
+                  <a href="#"><img src="https://lh3.googleusercontent.com/ogw/ADGmqu_euxRSfe1dROlju9152iwBb6ymr-5sMY9gEWz6=s32-c-mo" alt="avatar" class="w-8 h-8 rounded-full"></a>
+                  <div class="text-xs ml-2">
+                    <div class="text-white">Thomello</div>
+                    <div class="text-gray-500 text-xxs">#63746</div>
+                  </div>
+                </div>
+                <div class="flex items-center text-gray-500">
+                  <a href="#" class="hover:text-white">
+                    <svg class="w-5 h-5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 14c1.66 0 2.99-1.34 2.99-3L15 5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg>
+                  </a>
+                  <a href="#" class="ml-3 hover:text-white">
+                    <svg class="w-5 h-5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" opacity=".1" fill="none"></path><path d="M12 1c-4.97 0-9 4.03-9 9v7c0 1.66 1.34 3 3 3h3v-8H5v-2c0-3.87 3.13-7 7-7s7 3.13 7 7v2h-4v8h3c1.66 0 3-1.34 3-3v-7c0-4.97-4.03-9-9-9z"></path></svg>
+                  </a>
+                  <a href="#" class="ml-3 hover:text-white">
+                    <svg class="w-5 h-5" fill="currentColor" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"></path><path d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"></path></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="flex-1 flex justify-between">
+              <div class="bg-gray-600 flex-1 flex flex-col justify-between">
+                <div class="chat text-sm text-gray-400 overflow-y-auto">
+                  <div class="flex mx-6 my-3 py-4 border-t border-gray-700">
+                    <div class="flex-none"><a href="#"><img src="https://lh3.googleusercontent.com/ogw/ADGmqu_euxRSfe1dROlju9152iwBb6ymr-5sMY9gEWz6=s32-c-mo" alt="avatar" class="w-10 h-10 rounded-full"></a></div>
+                    <div class="ml-5">
+                      <div>
+                        <a href="#" class="text-white hover:underline">Thomello</a>
+                        <span class="text-xs text-gray-600 ml-1">01/01/2021</span>
+                      </div>
+                      <div>
+                        <div>Okay some comments</div>
+                        <div>some other comment</div>
+                        <div>This is going perfectly</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex mx-6 my-3 py-4 border-t border-gray-700">
+                    <div class="flex-none"><a href="#"><img src="https://lh3.googleusercontent.com/ogw/ADGmqu_euxRSfe1dROlju9152iwBb6ymr-5sMY9gEWz6=s32-c-mo" alt="avatar" class="w-10 h-10 rounded-full"></a></div>
+                    <div class="ml-5">
+                      <div>
+                        <a href="#" class="text-white hover:underline">Thomello</a>
+                        <span class="text-xs text-gray-600 ml-1">01/01/2021</span>
+                      </div>
+                      <div>
+                        <div>Here are the <a href="#" class="text-blue-400 hover:underline">Tailwind docs</a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex mx-6 my-3 py-4 border-t border-gray-700">
+                    <div class="flex-none"><a href="#"><img src="https://lh3.googleusercontent.com/ogw/ADGmqu_euxRSfe1dROlju9152iwBb6ymr-5sMY9gEWz6=s32-c-mo" alt="avatar" class="w-10 h-10 rounded-full"></a></div>
+                    <div class="ml-5">
+                      <div>
+                        <a href="#" class="text-white hover:underline">Thomello</a>
+                        <span class="text-xs text-gray-600 ml-1">01/02/2021</span>
+                      </div>
+                      <div>
+                        <div>Does that result in the raw svg being inlined in the DOM?</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex mx-6 my-3 py-4 border-t border-gray-700">
+                    <div class="flex-none"><a href="#"><img src="https://lh3.googleusercontent.com/ogw/ADGmqu_euxRSfe1dROlju9152iwBb6ymr-5sMY9gEWz6=s32-c-mo" alt="avatar" class="w-10 h-10 rounded-full"></a></div>
+                    <div class="ml-5">
+                      <div>
+                        <a href="#" class="text-white hover:underline">Thomello</a>
+                        <span class="text-xs text-gray-600 ml-1">01/02/2021</span>
+                      </div>
+                      <div>
+                        <div>This is handy if you don't want to load SVG as a separate file.</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex mx-6 my-3 py-4 border-t border-gray-700">
+                    <div class="flex-none"><a href="#"><img src="https://lh3.googleusercontent.com/ogw/ADGmqu_euxRSfe1dROlju9152iwBb6ymr-5sMY9gEWz6=s32-c-mo" alt="avatar" class="w-10 h-10 rounded-full"></a></div>
+                    <div class="ml-5">
+                      <div>
+                        <a href="#" class="text-white hover:underline">Thomello</a>
+                        <span class="text-xs text-gray-600 ml-1">01/02/2021</span>
+                      </div>
+                      <div>
+                        <div>Exactly the same way as in Vue <a href="#" class="text-indigo-400 hover:underline">@impulse</a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex mx-6 my-3 py-4 border-t border-gray-700">
+                    <div class="flex-none"><a href="#"><img src="https://lh3.googleusercontent.com/ogw/ADGmqu_euxRSfe1dROlju9152iwBb6ymr-5sMY9gEWz6=s32-c-mo" alt="avatar" class="w-10 h-10 rounded-full"></a></div>
+                    <div class="ml-5">
+                      <div>
+                        <a href="#" class="text-white hover:underline">Thomello</a>
+                        <span class="text-xs text-gray-600 ml-1">01/02/2021</span>
+                      </div>
+                      <div>
+                        <div>I think it can slow down the page if there's too much bloat in the document.</div>
+                        <div>Compared to loading it externally.</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex mx-6 my-3 py-4 border-t border-gray-700">
+                    <div class="flex-none"><a href="#"><img src="https://lh3.googleusercontent.com/ogw/ADGmqu_euxRSfe1dROlju9152iwBb6ymr-5sMY9gEWz6=s32-c-mo" alt="avatar" class="w-10 h-10 rounded-full"></a></div>
+                    <div class="ml-5">
+                      <div>
+                        <a href="#" class="text-white hover:underline">Thomello</a>
+                        <span class="text-xs text-gray-600 ml-1">01/02/2021</span>
+                      </div>
+                      <div>
+                        <div>Comparison would be better if it's not also comparing an vector svg to a raster gif, it's a difference in rendering too.</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex mx-6 my-3 py-4 border-t border-gray-700">
+                    <div class="flex-none"><a href="#"><img src="https://lh3.googleusercontent.com/ogw/ADGmqu_euxRSfe1dROlju9152iwBb6ymr-5sMY9gEWz6=s32-c-mo" alt="avatar" class="w-10 h-10 rounded-full"></a></div>
+                    <div class="ml-5">
+                      <div>
+                        <a href="#" class="text-white hover:underline">Thomello</a>
+                        <span class="text-xs text-gray-600 ml-1">01/02/2021</span>
+                      </div>
+                      <div>
+                        <div>Thank you that works perfectly! Turns out my z-index (or lack of setting one) was also messing things up on the navbar.</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex mx-6 my-3 py-4 border-t border-gray-700">
+                    <div class="flex-none"><a href="#"><img src="https://lh3.googleusercontent.com/ogw/ADGmqu_euxRSfe1dROlju9152iwBb6ymr-5sMY9gEWz6=s32-c-mo" alt="avatar" class="w-10 h-10 rounded-full"></a></div>
+                    <div class="ml-5">
+                      <div>
+                        <a href="#" class="text-white hover:underline">Thomello</a>
+                        <span class="text-xs text-gray-600 ml-1">01/02/2021</span>
+                      </div>
+                      <div>
+                        <div>yeah i never really use z-index</div>
+                        <div>for anything heh</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex mx-6 my-3 py-4 border-t border-gray-700">
+                    <div class="flex-none"><a href="#"><img src="https://lh3.googleusercontent.com/ogw/ADGmqu_euxRSfe1dROlju9152iwBb6ymr-5sMY9gEWz6=s32-c-mo" alt="avatar" class="w-10 h-10 rounded-full"></a></div>
+                    <div class="ml-5">
+                      <div>
+                        <a href="#" class="text-white hover:underline">Thomello</a>
+                        <span class="text-xs text-gray-600 ml-1">01/02/2021</span>
+                      </div>
+                      <div>
+                        <div>awesome thats cool to hear!</div>
+                      </div>
+                    </div>
+                  </div>
+    
+    
+                </div>
+                <div class="bg-gray-750 h-24 flex items-center mx-3 border-t border-gray-600">
+                  <button class="px-2 py-2 h-10 bg-gray-700 rounded-l text-gray-500 hover:text-white border-r border-gray-600">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><g data-name="Layer 2"><g data-name="plus-circle"><rect width="24" height="24" opacity="0"></rect><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm3 11h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2h2a1 1 0 0 1 0 2z"></path></g></g></svg>
+                  </button>
+                  <div class="flex-1">
+                    <input type="text" class="w-full text-sm h-10 px-2 py-2 bg-gray-700 text-gray-200 focus:outline-none">
+                  </div>
+                  <div class="px-2 py-2 bg-gray-700 rounded-r flex items-center h-10">
+                    <button class="h-10 bg-gray-700 rounded-l text-gray-500 hover:text-white">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 512 512"><path d="M32 448c0 17.7 14.3 32 32 32h160V320H32v128zm448-288h-42.1c6.2-12.1 10.1-25.5 10.1-40 0-48.5-39.5-88-88-88-41.6 0-68.5 21.3-103 68.3-34.5-47-61.4-68.3-103-68.3-48.5 0-88 39.5-88 88 0 14.5 3.8 27.9 10.1 40H32c-17.7 0-32 14.3-32 32v80c0 8.8 7.2 16 16 16h480c8.8 0 16-7.2 16-16v-80c0-17.7-14.3-32-32-32zm-326.1 0c-22.1 0-40-17.9-40-40s17.9-40 40-40c19.9 0 34.6 3.3 86.1 80h-86.1zm206.1 0h-86.1c51.4-76.5 65.7-80 86.1-80 22.1 0 40 17.9 40 40s-17.9 40-40 40zm-72 320h160c17.7 0 32-14.3 32-32V320H288v160z"></path></svg>
+                      </button>
+                      <button class="h-10 bg-gray-700 rounded-l text-gray-500 hover:text-white ml-3">
+                        <svg class="w-8 h-8" fill="currentColor" width="24" height="24" viewBox="0 0 24 24"><defs><path id="a" d="M24 24H0V0h24v24z"></path></defs><clipPath id="b"><use xlink:href="#a" overflow="visible"></use></clipPath><path d="M11.5 9H13v6h-1.5zM9 9H6c-.6 0-1 .5-1 1v4c0 .5.4 1 1 1h3c.6 0 1-.5 1-1v-2H8.5v1.5h-2v-3H10V10c0-.5-.4-1-1-1zm10 1.5V9h-4.5v6H16v-2h2v-1.5h-2v-1z" clip-path="url(#b)"></path></svg>
+                      </button>
+                      <button class="h-10 bg-gray-700 rounded-l text-gray-500 hover:text-white ml-3">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 496 512"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm80 168c17.7 0 32 14.3 32 32s-14.3 32-32 32-32-14.3-32-32 14.3-32 32-32zm-160 0c17.7 0 32 14.3 32 32s-14.3 32-32 32-32-14.3-32-32 14.3-32 32-32zm194.8 170.2C334.3 380.4 292.5 400 248 400s-86.3-19.6-114.8-53.8c-13.6-16.3 11-36.7 24.6-20.5 22.4 26.9 55.2 42.2 90.2 42.2s67.8-15.4 90.2-42.2c13.4-16.2 38.1 4.2 24.6 20.5z"></path></svg>
+                      </button>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="sidebar-users text-sm bg-gray-800 w-56 flex-none px-3 py-3 overflow-y-auto">
+                <h3 class="uppercase tracking-wide font-semibold text-xs text-gray-500 mb-2">Core Team — 1</h3>
+                <ul class="mb-6 truncate">
+                  <li class="text-gray-500 px-2 hover:text-gray-200 hover:bg-gray-750 py-1 my-2">
+                    <a href="#" class="flex items-center">
+                      <span class="flex-none"><a href="#"><img src="https://lh3.googleusercontent.com/ogw/ADGmqu_euxRSfe1dROlju9152iwBb6ymr-5sMY9gEWz6=s32-c-mo" alt="avatar" class="w-8 h-8 rounded-full"></a></span>
+                      <span class="ml-2">codeprudo</span>
+                    </a>
+                  </li>
+                </ul>
+                <h3 class="uppercase tracking-wide font-semibold text-xs text-gray-500 mb-2">Online — 243</h3>
+    
+                <ul class="mb-6 truncate">
+                  <li class="text-gray-500 px-2 hover:text-gray-200 hover:bg-gray-750 py-1 my-2">
+                    <a href="#" class="flex items-center">
+                      <span class="flex-none"><a href="#"><img src="https://lh3.googleusercontent.com/ogw/ADGmqu_euxRSfe1dROlju9152iwBb6ymr-5sMY9gEWz6=s32-c-mo" alt="avatar" class="w-8 h-8 rounded-full"></a></span>
+                      <span class="ml-2">codeprudo</span>
+                    </a>
+                  </li>
+                  <li class="text-gray-500 px-2 hover:text-gray-200 hover:bg-gray-750 py-1 my-2">
+                    <a href="#" class="flex items-center">
+                      <span class="flex-none"><a href="#"><img src="https://lh3.googleusercontent.com/ogw/ADGmqu_euxRSfe1dROlju9152iwBb6ymr-5sMY9gEWz6=s32-c-mo" alt="avatar" class="w-8 h-8 rounded-full"></a></span>
+                      <div class="ml-2">
+                        <div>codeprudo</div>
+                        <div class="text-xxs text-gray-600">Playing <span class="font-bold">Visual Studio Code</span></div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="text-gray-500 px-2 hover:text-gray-200 hover:bg-gray-750 py-1 my-2">
+                    <a href="#" class="flex items-center">
+                      <span class="flex-none"><a href="#"><img src="https://lh3.googleusercontent.com/ogw/ADGmqu_euxRSfe1dROlju9152iwBb6ymr-5sMY9gEWz6=s32-c-mo" alt="avatar" class="w-8 h-8 rounded-full"></a></span>
+                      <span class="ml-2">codeprudo</span>
+                    </a>
+                  </li>
+                  <li class="text-gray-500 px-2 hover:text-gray-200 hover:bg-gray-750 py-1 my-2">
+                    <a href="#" class="flex items-center">
+                      <span class="flex-none"><a href="#"><img src="https://lh3.googleusercontent.com/ogw/ADGmqu_euxRSfe1dROlju9152iwBb6ymr-5sMY9gEWz6=s32-c-mo" alt="avatar" class="w-8 h-8 rounded-full"></a></span>
+                      <span class="ml-2">codeprudo</span>
+                    </a>
+                  </li>
+                  <li class="text-gray-500 px-2 hover:text-gray-200 hover:bg-gray-750 py-1 my-2">
+                    <a href="#" class="flex items-center">
+                      <span class="flex-none"><a href="#"><img src="https://lh3.googleusercontent.com/ogw/ADGmqu_euxRSfe1dROlju9152iwBb6ymr-5sMY9gEWz6=s32-c-mo" alt="avatar" class="w-8 h-8 rounded-full"></a></span>
+                      <span class="ml-2">codeprudo</span>
+                    </a>
+                  </li>
+                  <li class="text-gray-500 px-2 hover:text-gray-200 hover:bg-gray-750 py-1 my-2">
+                    <a href="#" class="flex items-center">
+                      <span class="flex-none"><a href="#"><img src="https://lh3.googleusercontent.com/ogw/ADGmqu_euxRSfe1dROlju9152iwBb6ymr-5sMY9gEWz6=s32-c-mo" alt="avatar" class="w-8 h-8 rounded-full"></a></span>
+                      <span class="ml-2">codeprudo</span>
+                    </a>
+                  </li>
+                  <li class="text-gray-500 px-2 hover:text-gray-200 hover:bg-gray-750 py-1 my-2">
+                    <a href="#" class="flex items-center">
+                      <span class="flex-none"><a href="#"><img src="https://lh3.googleusercontent.com/ogw/ADGmqu_euxRSfe1dROlju9152iwBb6ymr-5sMY9gEWz6=s32-c-mo" alt="avatar" class="w-8 h-8 rounded-full"></a></span>
+                      <span class="ml-2">codeprudo</span>
+                    </a>
+                  </li>
+                  <li class="text-gray-500 px-2 hover:text-gray-200 hover:bg-gray-750 py-1 my-2">
+                    <a href="#" class="flex items-center">
+                      <span class="flex-none"><a href="#"><img src="https://lh3.googleusercontent.com/ogw/ADGmqu_euxRSfe1dROlju9152iwBb6ymr-5sMY9gEWz6=s32-c-mo" alt="avatar" class="w-8 h-8 rounded-full"></a></span>
+                      <span class="ml-2">codeprudo</span>
+                    </a>
+                  </li>
+                  <li class="text-gray-500 px-2 hover:text-gray-200 hover:bg-gray-750 py-1 my-2">
+                    <a href="#" class="flex items-center">
+                      <span class="flex-none"><a href="#"><img src="https://lh3.googleusercontent.com/ogw/ADGmqu_euxRSfe1dROlju9152iwBb6ymr-5sMY9gEWz6=s32-c-mo" alt="avatar" class="w-8 h-8 rounded-full"></a></span>
+                      <span class="ml-2">codeprudo</span>
+                    </a>
+                  </li>
+                  <li class="text-gray-500 px-2 hover:text-gray-200 hover:bg-gray-750 py-1 my-2">
+                    <a href="#" class="flex items-center">
+                      <span class="flex-none"><a href="#"><img src="https://lh3.googleusercontent.com/ogw/ADGmqu_euxRSfe1dROlju9152iwBb6ymr-5sMY9gEWz6=s32-c-mo" alt="avatar" class="w-8 h-8 rounded-full"></a></span>
+                      <span class="ml-2">codeprudo</span>
+                    </a>
+                  </li>
+                  <li class="text-gray-500 px-2 hover:text-gray-200 hover:bg-gray-750 py-1 my-2">
+                    <a href="#" class="flex items-center">
+                      <span class="flex-none"><a href="#"><img src="https://lh3.googleusercontent.com/ogw/ADGmqu_euxRSfe1dROlju9152iwBb6ymr-5sMY9gEWz6=s32-c-mo" alt="avatar" class="w-8 h-8 rounded-full"></a></span>
+                      <span class="ml-2">codeprudo</span>
+                    </a>
+                  </li>
+                  <li class="text-gray-500 px-2 hover:text-gray-200 hover:bg-gray-750 py-1 my-2">
+                    <a href="#" class="flex items-center">
+                      <span class="flex-none"><a href="#"><img src="https://lh3.googleusercontent.com/ogw/ADGmqu_euxRSfe1dROlju9152iwBb6ymr-5sMY9gEWz6=s32-c-mo" alt="avatar" class="w-8 h-8 rounded-full"></a></span>
+                      <span class="ml-2">codeprudo</span>
+                    </a>
+                  </li>
+                  <li class="text-gray-500 px-2 hover:text-gray-200 hover:bg-gray-750 py-1 my-2">
+                    <a href="#" class="flex items-center">
+                      <span class="flex-none"><a href="#"><img src="https://lh3.googleusercontent.com/ogw/ADGmqu_euxRSfe1dROlju9152iwBb6ymr-5sMY9gEWz6=s32-c-mo" alt="avatar" class="w-8 h-8 rounded-full"></a></span>
+                      <span class="ml-2">codeprudo</span>
+                    </a>
+                  </li>
+                  <li class="text-gray-500 px-2 hover:text-gray-200 hover:bg-gray-750 py-1 my-2">
+                    <a href="#" class="flex items-center">
+                      <span class="flex-none"><a href="#"><img src="https://lh3.googleusercontent.com/ogw/ADGmqu_euxRSfe1dROlju9152iwBb6ymr-5sMY9gEWz6=s32-c-mo" alt="avatar" class="w-8 h-8 rounded-full"></a></span>
+                      <span class="ml-2">codeprudo</span>
+                    </a>
+                  </li>
+                  <li class="text-gray-500 px-2 hover:text-gray-200 hover:bg-gray-750 py-1 my-2">
+                    <a href="#" class="flex items-center">
+                      <span class="flex-none"><a href="#"><img src="https://lh3.googleusercontent.com/ogw/ADGmqu_euxRSfe1dROlju9152iwBb6ymr-5sMY9gEWz6=s32-c-mo" alt="avatar" class="w-8 h-8 rounded-full"></a></span>
+                      <span class="ml-2">codeprudo</span>
+                    </a>
+                  </li>
+                  <li class="text-gray-500 px-2 hover:text-gray-200 hover:bg-gray-750 py-1 my-2">
+                    <a href="#" class="flex items-center">
+                      <span class="flex-none"><a href="#"><img src="https://lh3.googleusercontent.com/ogw/ADGmqu_euxRSfe1dROlju9152iwBb6ymr-5sMY9gEWz6=s32-c-mo" alt="avatar" class="w-8 h-8 rounded-full"></a></span>
+                      <span class="ml-2">codeprudo</span>
+                    </a>
+                  </li>
+                  <li class="text-gray-500 px-2 hover:text-gray-200 hover:bg-gray-750 py-1 my-2">
+                    <a href="#" class="flex items-center">
+                      <span class="flex-none"><a href="#"><img src="https://lh3.googleusercontent.com/ogw/ADGmqu_euxRSfe1dROlju9152iwBb6ymr-5sMY9gEWz6=s32-c-mo" alt="avatar" class="w-8 h-8 rounded-full"></a></span>
+                      <span class="ml-2">codeprudo</span>
+                    </a>
+                  </li>
+                  <li class="text-gray-500 px-2 hover:text-gray-200 hover:bg-gray-750 py-1 my-2">
+                    <a href="#" class="flex items-center">
+                      <span class="flex-none"><a href="#"><img src="https://lh3.googleusercontent.com/ogw/ADGmqu_euxRSfe1dROlju9152iwBb6ymr-5sMY9gEWz6=s32-c-mo" alt="avatar" class="w-8 h-8 rounded-full"></a></span>
+                      <span class="ml-2">codeprudo</span>
+                    </a>
+                  </li>
+                  <li class="text-gray-500 px-2 hover:text-gray-200 hover:bg-gray-750 py-1 my-2">
+                    <a href="#" class="flex items-center">
+                      <span class="flex-none"><a href="#"><img src="https://lh3.googleusercontent.com/ogw/ADGmqu_euxRSfe1dROlju9152iwBb6ymr-5sMY9gEWz6=s32-c-mo" alt="avatar" class="w-8 h-8 rounded-full"></a></span>
+                      <span class="ml-2">codeprudo</span>
+                    </a>
+                  </li>
+                  <li class="text-gray-500 px-2 hover:text-gray-200 hover:bg-gray-750 py-1 my-2">
+                    <a href="#" class="flex items-center">
+                      <span class="flex-none"><a href="#"><img src="https://lh3.googleusercontent.com/ogw/ADGmqu_euxRSfe1dROlju9152iwBb6ymr-5sMY9gEWz6=s32-c-mo" alt="avatar" class="w-8 h-8 rounded-full"></a></span>
+                      <span class="ml-2">codeprudo</span>
+                    </a>
+                  </li>
+                  <li class="text-gray-500 px-2 hover:text-gray-200 hover:bg-gray-750 py-1 my-2">
+                    <a href="#" class="flex items-center">
+                      <span class="flex-none"><a href="#"><img src="https://lh3.googleusercontent.com/ogw/ADGmqu_euxRSfe1dROlju9152iwBb6ymr-5sMY9gEWz6=s32-c-mo" alt="avatar" class="w-8 h-8 rounded-full"></a></span>
+                      <span class="ml-2">codeprudo</span>
+                    </a>
+                  </li>
+                  <li class="text-gray-500 px-2 hover:text-gray-200 hover:bg-gray-750 py-1 my-2">
+                    <a href="#" class="flex items-center">
+                      <span class="flex-none"><a href="#"><img src="https://lh3.googleusercontent.com/ogw/ADGmqu_euxRSfe1dROlju9152iwBb6ymr-5sMY9gEWz6=s32-c-mo" alt="avatar" class="w-8 h-8 rounded-full"></a></span>
+                      <span class="ml-2">codeprudo</span>
+                    </a>
+                  </li>
+                  <li class="text-gray-500 px-2 hover:text-gray-200 hover:bg-gray-750 py-1 my-2">
+                    <a href="#" class="flex items-center">
+                      <span class="flex-none"><a href="#"><img src="https://lh3.googleusercontent.com/ogw/ADGmqu_euxRSfe1dROlju9152iwBb6ymr-5sMY9gEWz6=s32-c-mo" alt="avatar" class="w-8 h-8 rounded-full"></a></span>
+                      <span class="ml-2">codeprudo</span>
+                    </a>
+                  </li>
+                  <li class="text-gray-500 px-2 hover:text-gray-200 hover:bg-gray-750 py-1 my-2">
+                    <a href="#" class="flex items-center">
+                      <span class="flex-none"><a href="#"><img src="https://lh3.googleusercontent.com/ogw/ADGmqu_euxRSfe1dROlju9152iwBb6ymr-5sMY9gEWz6=s32-c-mo" alt="avatar" class="w-8 h-8 rounded-full"></a></span>
+                      <span class="ml-2">codeprudo</span>
+                    </a>
+                  </li>
+                  <li class="text-gray-500 px-2 hover:text-gray-200 hover:bg-gray-750 py-1 my-2">
+                    <a href="#" class="flex items-center">
+                      <span class="flex-none"><a href="#"><img src="https://lh3.googleusercontent.com/ogw/ADGmqu_euxRSfe1dROlju9152iwBb6ymr-5sMY9gEWz6=s32-c-mo" alt="avatar" class="w-8 h-8 rounded-full"></a></span>
+                      <span class="ml-2">codeprudo</span>
+                    </a>
+                  </li>
+                  <li class="text-gray-500 px-2 hover:text-gray-200 hover:bg-gray-750 py-1 my-2">
+                    <a href="#" class="flex items-center">
+                      <span class="flex-none"><a href="#"><img src="https://lh3.googleusercontent.com/ogw/ADGmqu_euxRSfe1dROlju9152iwBb6ymr-5sMY9gEWz6=s32-c-mo" alt="avatar" class="w-8 h-8 rounded-full"></a></span>
+                      <span class="ml-2">codeprudo</span>
+                    </a>
+                  </li>
+                  <li class="text-gray-500 px-2 hover:text-gray-200 hover:bg-gray-750 py-1 my-2">
+                    <a href="#" class="flex items-center">
+                      <span class="flex-none"><a href="#"><img src="https://lh3.googleusercontent.com/ogw/ADGmqu_euxRSfe1dROlju9152iwBb6ymr-5sMY9gEWz6=s32-c-mo" alt="avatar" class="w-8 h-8 rounded-full"></a></span>
+                      <span class="ml-2">codeprudo</span>
+                    </a>
+                  </li>
+                  <li class="text-gray-500 px-2 hover:text-gray-200 hover:bg-gray-750 py-1 my-2">
+                    <a href="#" class="flex items-center">
+                      <span class="flex-none"><a href="#"><img src="https://lh3.googleusercontent.com/ogw/ADGmqu_euxRSfe1dROlju9152iwBb6ymr-5sMY9gEWz6=s32-c-mo" alt="avatar" class="w-8 h-8 rounded-full"></a></span>
+                      <span class="ml-2">codeprudo</span>
+                    </a>
+                  </li>
+                  <li class="text-gray-500 px-2 hover:text-gray-200 hover:bg-gray-750 py-1 my-2">
+                    <a href="#" class="flex items-center">
+                      <span class="flex-none"><a href="#"><img src="https://lh3.googleusercontent.com/ogw/ADGmqu_euxRSfe1dROlju9152iwBb6ymr-5sMY9gEWz6=s32-c-mo" alt="avatar" class="w-8 h-8 rounded-full"></a></span>
+                      <span class="ml-2">codeprudo</span>
+                    </a>
+                  </li>
+                  <li class="text-gray-500 px-2 hover:text-gray-200 hover:bg-gray-750 py-1 my-2">
+                    <a href="#" class="flex items-center">
+                      <span class="flex-none"><a href="#"><img src="https://lh3.googleusercontent.com/ogw/ADGmqu_euxRSfe1dROlju9152iwBb6ymr-5sMY9gEWz6=s32-c-mo" alt="avatar" class="w-8 h-8 rounded-full"></a></span>
+                      <span class="ml-2">codeprudo</span>
+                    </a>
+                  </li>
+                  <li class="text-gray-500 px-2 hover:text-gray-200 hover:bg-gray-750 py-1 my-2">
+                    <a href="#" class="flex items-center">
+                      <span class="flex-none"><a href="#"><img src="https://lh3.googleusercontent.com/ogw/ADGmqu_euxRSfe1dROlju9152iwBb6ymr-5sMY9gEWz6=s32-c-mo" alt="avatar" class="w-8 h-8 rounded-full"></a></span>
+                      <span class="ml-2">codeprudo</span>
+                    </a>
+                  </li>
+                  <li class="text-gray-500 px-2 hover:text-gray-200 hover:bg-gray-750 py-1 my-2">
+                    <a href="#" class="flex items-center">
+                      <span class="flex-none"><a href="#"><img src="https://lh3.googleusercontent.com/ogw/ADGmqu_euxRSfe1dROlju9152iwBb6ymr-5sMY9gEWz6=s32-c-mo" alt="avatar" class="w-8 h-8 rounded-full"></a></span>
+                      <span class="ml-2">codeprudo</span>
+                    </a>
+                  </li>
+                  <li class="text-gray-500 px-2 hover:text-gray-200 hover:bg-gray-750 py-1 my-2">
+                    <a href="#" class="flex items-center">
+                      <span class="flex-none"><a href="#"><img src="https://lh3.googleusercontent.com/ogw/ADGmqu_euxRSfe1dROlju9152iwBb6ymr-5sMY9gEWz6=s32-c-mo" alt="avatar" class="w-8 h-8 rounded-full"></a></span>
+                      <span class="ml-2">codeprudo</span>
+                    </a>
+                  </li>
+                  <li class="text-gray-500 px-2 hover:text-gray-200 hover:bg-gray-750 py-1 my-2">
+                    <a href="#" class="flex items-center">
+                      <span class="flex-none"><a href="#"><img src="https://lh3.googleusercontent.com/ogw/ADGmqu_euxRSfe1dROlju9152iwBb6ymr-5sMY9gEWz6=s32-c-mo" alt="avatar" class="w-8 h-8 rounded-full"></a></span>
+                      <span class="ml-2">codeprudo</span>
+                    </a>
+                  </li>
+                  <li class="text-gray-500 px-2 hover:text-gray-200 hover:bg-gray-750 py-1 my-2">
+                    <a href="#" class="flex items-center">
+                      <span class="flex-none"><a href="#"><img src="https://lh3.googleusercontent.com/ogw/ADGmqu_euxRSfe1dROlju9152iwBb6ymr-5sMY9gEWz6=s32-c-mo" alt="avatar" class="w-8 h-8 rounded-full"></a></span>
+                      <span class="ml-2">codeprudo</span>
+                    </a>
+                  </li>
+                  <li class="text-gray-500 px-2 hover:text-gray-200 hover:bg-gray-750 py-1 my-2">
+                    <a href="#" class="flex items-center">
+                      <span class="flex-none"><a href="#"><img src="https://lh3.googleusercontent.com/ogw/ADGmqu_euxRSfe1dROlju9152iwBb6ymr-5sMY9gEWz6=s32-c-mo" alt="avatar" class="w-8 h-8 rounded-full"></a></span>
+                      <span class="ml-2">codeprudo</span>
+                    </a>
+                  </li>
+                  <li class="text-gray-500 px-2 hover:text-gray-200 hover:bg-gray-750 py-1 my-2">
+                    <a href="#" class="flex items-center">
+                      <span class="flex-none"><a href="#"><img src="https://lh3.googleusercontent.com/ogw/ADGmqu_euxRSfe1dROlju9152iwBb6ymr-5sMY9gEWz6=s32-c-mo" alt="avatar" class="w-8 h-8 rounded-full"></a></span>
+                      <span class="ml-2">codeprudo</span>
+                    </a>
+                  </li>
+                  <li class="text-gray-500 px-2 hover:text-gray-200 hover:bg-gray-750 py-1 my-2">
+                    <a href="#" class="flex items-center">
+                      <span class="flex-none"><a href="#"><img src="https://lh3.googleusercontent.com/ogw/ADGmqu_euxRSfe1dROlju9152iwBb6ymr-5sMY9gEWz6=s32-c-mo" alt="avatar" class="w-8 h-8 rounded-full"></a></span>
+                      <span class="ml-2">codeprudo</span>
+                    </a>
+                  </li>
+                </ul>
+    
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>
