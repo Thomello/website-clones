@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>Facebook Clone - Tailwind</title>
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- Navigation bar -->
+    <nav class="bg-white w-full h-16 shadow-md flex justify-between px-4 items-center">
+        <div class="flex items-center">
+            <div class="">
+                <svg viewBox="0 0 36 36" class="a8c37x1j ms05siws hwsy1cff b7h9ocf4" fill="url(#jsc_c_2)" height="40" width="40"><defs><linearGradient x1="50%" x2="50%" y1="97.0782153%" y2="0%" id="jsc_c_2"><stop offset="0%" stop-color="#0062E0"></stop><stop offset="100%" stop-color="#19AFFF"></stop></linearGradient></defs><path d="M15 35.8C6.5 34.3 0 26.9 0 18 0 8.1 8.1 0 18 0s18 8.1 18 18c0 8.9-6.5 16.3-15 17.8l-1-.8h-4l-1 .8z"></path><path class="p361ku9c" d="M25 23l.8-5H21v-3.5c0-1.4.5-2.5 2.7-2.5H26V7.4c-1.3-.2-2.7-.4-4-.4-4.1 0-7 2.5-7 7v4h-4.5v5H15v12.7c1 .2 2 .3 3 .3s2-.1 3-.3V23h4z"></path></svg>
+            </div>
+            <div class="ml-3 rounded-full flex items-center space-x-2 py-2 px-4 w-58 bg-gray-200">
+                <div class="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                      </svg>
+                </div> 
+                <input type="text" class="w-full bg-transparent focus:outline-none" placeholder="Search Facebook"> 
+            </div>
+        </div>
+
+
+        <div class="flex items-center space-x-5">
+            <div class="w-24 h-full px-8 border-b-4 border-blue-500 py-4">
+                <svg viewBox="0 0 28 28" class="a8c37x1j ms05siws hwsy1cff b7h9ocf4 aaxa7vy3" height="28" width="28" fill="#1877F2"><path d="M25.825 12.29C25.824 12.289 25.823 12.288 25.821 12.286L15.027 2.937C14.752 2.675 14.392 2.527 13.989 2.521 13.608 2.527 13.248 2.675 13.001 2.912L2.175 12.29C1.756 12.658 1.629 13.245 1.868 13.759 2.079 14.215 2.567 14.479 3.069 14.479L5 14.479 5 23.729C5 24.695 5.784 25.479 6.75 25.479L11 25.479C11.552 25.479 12 25.031 12 24.479L12 18.309C12 18.126 12.148 17.979 12.33 17.979L15.67 17.979C15.852 17.979 16 18.126 16 18.309L16 24.479C16 25.031 16.448 25.479 17 25.479L21.25 25.479C22.217 25.479 23 24.695 23 23.729L23 14.479 24.931 14.479C25.433 14.479 25.921 14.215 26.132 13.759 26.371 13.245 26.244 12.658 25.825 12.29"></path></svg>
+            </div>
+            <div class="w-24 h-full hover:bg-gray-200 rounded-md px-8  py-3">
+                <svg viewBox="0 0 28 28" class="a8c37x1j ms05siws hwsy1cff b7h9ocf4 em6zcovv" height="28" width="28" fill="#828282"><path d="M5.75 4A.75.75 0 015 3.25v-1a.75.75 0 011.5 0v1a.75.75 0 01-.75.75zm.75 11.251a.75.75 0 01-1.5 0V8.749a.75.75 0 011.5 0v6.502zM5.75 28a.75.75 0 01-.75-.75v-6.5a.75.75 0 011.5 0v6.5a.75.75 0 01-.75.75zm15.737-16.234L23.214 6.5H9.5v11h13.715l-1.728-5.266a.749.749 0 010-.468zM4.75 5h19.5a.75.75 0 01.713.986l-1.974 6.006 1.974 6.023a.75.75 0 01-.713.985H4.75a.75.75 0 010-1.502L8 17.5v-11H4.75a.749.749 0 110-1.5z"></path></svg>
+            </div>
+            <div class="w-24 h-full hover:bg-gray-200 rounded-md px-8  py-3">
+                <svg viewBox="0 0 28 28" class="a8c37x1j ms05siws hwsy1cff b7h9ocf4 em6zcovv" height="28" width="28" fill="#828282"><path d="M8.75 25.25C8.336 25.25 8 24.914 8 24.5 8 24.086 8.336 23.75 8.75 23.75L19.25 23.75C19.664 23.75 20 24.086 20 24.5 20 24.914 19.664 25.25 19.25 25.25L8.75 25.25ZM17.163 12.846 12.055 15.923C11.591 16.202 11 15.869 11 15.327L11 9.172C11 8.631 11.591 8.297 12.055 8.576L17.163 11.654C17.612 11.924 17.612 12.575 17.163 12.846ZM21.75 20.25C22.992 20.25 24 19.242 24 18L24 6.5C24 5.258 22.992 4.25 21.75 4.25L6.25 4.25C5.008 4.25 4 5.258 4 6.5L4 18C4 19.242 5.008 20.25 6.25 20.25L21.75 20.25ZM21.75 21.75 6.25 21.75C4.179 21.75 2.5 20.071 2.5 18L2.5 6.5C2.5 4.429 4.179 2.75 6.25 2.75L21.75 2.75C23.821 2.75 25.5 4.429 25.5 6.5L25.5 18C25.5 20.071 23.821 21.75 21.75 21.75Z"></path></svg>
+            </div>
+            <div class="w-24 h-full hover:bg-gray-200 rounded-md px-8  py-3">
+                <svg viewBox="0 0 28 28" class="a8c37x1j ms05siws hwsy1cff b7h9ocf4 em6zcovv" height="28" width="28" fill="#828282"><path d="M25.5 14C25.5 7.649 20.351 2.5 14 2.5 7.649 2.5 2.5 7.649 2.5 14 2.5 20.351 7.649 25.5 14 25.5 20.351 25.5 25.5 20.351 25.5 14ZM27 14C27 21.18 21.18 27 14 27 6.82 27 1 21.18 1 14 1 6.82 6.82 1 14 1 21.18 1 27 6.82 27 14ZM7.479 14 7.631 14C7.933 14 8.102 14.338 7.934 14.591 7.334 15.491 6.983 16.568 6.983 17.724L6.983 18.221C6.983 18.342 6.99 18.461 7.004 18.578 7.03 18.802 6.862 19 6.637 19L6.123 19C5.228 19 4.5 18.25 4.5 17.327 4.5 15.492 5.727 14 7.479 14ZM20.521 14C22.274 14 23.5 15.492 23.5 17.327 23.5 18.25 22.772 19 21.878 19L21.364 19C21.139 19 20.97 18.802 20.997 18.578 21.01 18.461 21.017 18.342 21.017 18.221L21.017 17.724C21.017 16.568 20.667 15.491 20.067 14.591 19.899 14.338 20.067 14 20.369 14L20.521 14ZM8.25 13C7.147 13 6.25 11.991 6.25 10.75 6.25 9.384 7.035 8.5 8.25 8.5 9.465 8.5 10.25 9.384 10.25 10.75 10.25 11.991 9.353 13 8.25 13ZM19.75 13C18.647 13 17.75 11.991 17.75 10.75 17.75 9.384 18.535 8.5 19.75 8.5 20.965 8.5 21.75 9.384 21.75 10.75 21.75 11.991 20.853 13 19.75 13ZM15.172 13.5C17.558 13.5 19.5 15.395 19.5 17.724L19.5 18.221C19.5 19.202 18.683 20 17.677 20L10.323 20C9.317 20 8.5 19.202 8.5 18.221L8.5 17.724C8.5 15.395 10.441 13.5 12.828 13.5L15.172 13.5ZM16.75 9C16.75 10.655 15.517 12 14 12 12.484 12 11.25 10.655 11.25 9 11.25 7.15 12.304 6 14 6 15.697 6 16.75 7.15 16.75 9Z"></path></svg>
+            </div>
+            <div class="w-24 h-full hover:bg-gray-200 rounded-md px-8  py-3">
+                <svg viewBox="0 0 28 28" class="a8c37x1j ms05siws hwsy1cff b7h9ocf4 em6zcovv" height="28" width="28" fill="#828282"><path d="M23.5 9.5H10.25a.75.75 0 00-.75.75v7c0 .414.336.75.75.75H17v5.5H4.5v-19h19v5zm0 14h-5v-6.25a.75.75 0 00-.75-.75H11V11h12.5v12.5zm1.5.25V4.25C25 3.561 24.439 3 23.75 3H4.25C3.561 3 3 3.561 3 4.25v19.5c0 .689.561 1.25 1.25 1.25h19.5c.689 0 1.25-.561 1.25-1.25z"></path></svg>
+            </div>
+        </div>
+
+
+        <div class="flex items-center space-x-3">
+            <div class="flex items-center space-x-2 hover:bg-gray-100 rounded-full p-1">
+                <img src="https://www.talkwalker.com/images/2020/blog-headers/image-analysis.png" class="w-7 h-7 rounded-full" alt="">
+                <div class="text-md font-bold pr-3">Thomello</div>
+            </div>
+
+
+            <div class="bg-gray-200 w-10 h-10 rounded-full p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+            </div>
+
+            <div class="bg-gray-200 w-10 h-10 rounded-full p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+            </div>
+
+            <div class="bg-gray-200 w-10 h-10 rounded-full p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
+            </div>
+            
+            <div class="bg-gray-200 w-10 h-10 rounded-full p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </div> 
+        </div>
+    </nav>
+
+    <!-- Main body Content  -->
+    <div class="flex justify-between">
+        <div class="h-screen w-3/5">
+            
+            <div class="mt-4 flex items-center hover:bg-gray-300 rounded-md p-2 w-64 ml-2">
+                <img src="https://www.talkwalker.com/images/2020/blog-headers/image-analysis.png" class="w-7 h-7 rounded-full" alt="">
+                <strong class="ml-2">Thomello Matsasa</strong>
+            </div>
+
+            <div class="mt-2 flex items-center hover:bg-gray-300 rounded-md p-2 w-64 ml-2">
+                <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yg/r/kOxV5aCYUAE.png" class="w-7 h-7 rounded-full" alt="">
+                <strong class="ml-2">COVID-19 Information Center</strong>
+            </div>
+
+            <div class="mt-2 flex items-center hover:bg-gray-300 rounded-md p-2 w-64 ml-2">
+                <img src="https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png" class="w-7 h-7 rounded-full" alt="">
+                <strong class="ml-2">Friends</strong>
+            </div>
+
+            <div class="mt-2 flex items-center hover:bg-gray-300 rounded-md p-2 w-64 ml-2">
+                <img src="https://static.xx.fbcdn.net/rsrc.php/v3/y5/r/PrjLkDYpYbH.png" class="w-7 h-7 rounded-full" alt="">
+                <strong class="ml-2">Group</strong>
+            </div>
+
+            <div class="mt-2 flex items-center hover:bg-gray-300 rounded-md p-2 w-64 ml-2">
+                <img src="https://static.xx.fbcdn.net/rsrc.php/v3/y5/r/duk32h44Y31.png" class="w-7 h-7 rounded-full" alt="">
+                <strong class="ml-2">Watch</strong>
+            </div>
+
+            <div class="mt-2 flex items-center hover:bg-gray-300 rounded-md p-2 w-64 ml-2">
+                <div class="bg-gray-200 w-8  h-8 rounded-full p-1">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </div>
+                <strong class="ml-2">See More</strong>
+            </div>
+
+            <hr class="my-3 mx-4 bg-gray-600 ">
+
+            <div class="text-gray-600 text-lg font-semibold ml-4">Your Shortcuts</div>
+
+            <div class="mt-2 flex items-center hover:bg-gray-300 rounded-md p-2 w-64 ml-2">
+                <div class="w-8  h-8">
+                    <img src="https://www.talkwalker.com/images/2020/blog-headers/image-analysis.png" class="w-7 h-7 rounded-md" alt="">
+                </div>
+                <div class="ml-2 font-semibold">War Heroes</div>
+            </div>
+
+            <div class="mt-1 flex items-center hover:bg-gray-300 rounded-md p-2 w-64 ml-2">
+                <div class="w-8  h-8">
+                    <img src="https://www.talkwalker.com/images/2020/blog-headers/image-analysis.png" class="w-7 h-7 rounded-md" alt="">
+                </div>
+                <div class="ml-2 font-semibold">Youth Opportunities Lesotho</div>
+            </div>
+
+            <div class="mt-1 flex items-center hover:bg-gray-300 rounded-md p-2 w-64 ml-2">
+                <div class="w-8  h-8">
+                    <img src="https://www.talkwalker.com/images/2020/blog-headers/image-analysis.png" class="w-7 h-7 rounded-md" alt="">
+                </div>
+                <div class="ml-2 font-semibold">Buy and sell online Lesotho </div>
+            </div>
+
+            <div class="ml-4">
+                <span class="text-sm text-gray-500">Privacy • </span>
+                <span class="text-sm text-gray-500">Terms • </span>
+                <span class="text-sm text-gray-500">Advertising • </span>
+                <span class="text-sm text-gray-500">Ad Choices • </span>
+                <span class="text-sm text-gray-500">Cookies • </span>
+                <span class="text-sm text-gray-500">More  • </span>
+                <span class="text-sm text-gray-500">Facebook &commat; 2021</span>
+            </div>
+
+        </div>
+
+
+        <div class=" h-screen flex-grow w-4/5">
+            
+            <div class="bg-white shadow-md rounded-lg mt-5 flex flex-col justify-between px-4 py-3">
+                <div class="flex">
+                    <img src="https://www.talkwalker.com/images/2020/blog-headers/image-analysis.png" class="w-10 h-10 rounded-full" alt="">
+
+                    <input type="text" class="bg-gray-100 w-full focus:outline-none rounded-full py-2 pl-4 ml-2 " placeholder="What's on your mind, Thomello">
+                </div>
+
+                <hr class="my-4">
+
+                <div class="flex justify-between">
+
+                    <div class="hover:bg-gray-100 rounded-lg py-2 px-4 flex space-x-1">
+                        <svg class="w-6 h-6" fill="red" stroke="" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+
+                        <strong class="text-gray-600">Live Video</strong>
+                    </div>
+
+                    <div class="hover:bg-gray-100 rounded-lg py-2 px-4 flex space-x-1">
+                        <svg class="w-6 h-6" fill="green" stroke="" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        
+                        <strong class="text-gray-600">Photo/Video</strong>
+
+                    </div>
+                    <div class="hover:bg-gray-100 rounded-lg py-2 px-4 flex space-x-1">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <strong class="text-gray-600">Feeling/Activity</strong>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white shadow-sm p-3 mt-4 rounded-lg flex items-center space-x-4">
+                <div class="text-white bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 py-2 px-5 rounded-full flex items-center space-x-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                    <span>Create Room</span>
+                </div>
+
+                <div>
+                    <img src="https://www.talkwalker.com/images/2020/blog-headers/image-analysis.png" class="rounded-full w-10 h-10" alt="">
+                </div> <div>
+                    <img src="https://images.unsplash.com/photo-1542300058-b94b8ab7411b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTV8fHxlbnwwfHx8&auto=format&fit=crop&w=500&q=60" class="rounded-full w-10 h-10" alt="">
+                </div> <div>
+                    <img src="https://www.talkwalker.com/images/2020/blog-headers/image-analysis.png" class="rounded-full w-10 h-10" alt="">
+                </div> <div>
+                    <img src="https://images.unsplash.com/photo-1542300058-b94b8ab7411b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTV8fHxlbnwwfHx8&auto=format&fit=crop&w=500&q=60" class="rounded-full w-10 h-10" alt="">
+                </div> <div>
+                    <img src="https://www.talkwalker.com/images/2020/blog-headers/image-analysis.png" class="rounded-full w-10 h-10" alt="">
+                </div><div>
+                    <img src="https://www.talkwalker.com/images/2020/blog-headers/image-analysis.png" class="rounded-full w-10 h-10" alt="">
+                </div><div>
+                    <img src="https://images.unsplash.com/photo-1414438992182-69e404046f80?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MjN8fHxlbnwwfHx8&auto=format&fit=crop&w=500&q=60" class="rounded-full w-10 h-10" alt="">
+                </div><div>
+                    <img src="https://www.talkwalker.com/images/2020/blog-headers/image-analysis.png" class="rounded-full w-10 h-10" alt="">
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg flex space-x-2 p-3 mt-4 shadow-sm">
+                <div class="border-sm border p-3 hover:bg-gray-100 rounded-lg border-gray-200 flex flex-col items-center w-52 ">
+                    <img src="https://www.talkwalker.com/images/2020/blog-headers/image-analysis.png" class="w-16 h-16 rounded-full" alt="">
+                    <span class="font-bold text-gray-600 mt-2">Thomello's Room</span>
+                    <div>Get Started</div>
+                    <div class="bg-transparent py-2 items-center border-2 border-blue-200 mt-4 w-full rounded-lg text-blue-500 font-bold" style="text-align: center;">Create</div>
+                </div>
+
+                <div class="border-sm border p-3 hover:bg-gray-100 rounded-lg border-gray-200 flex flex-col items-center w-52 ">
+                    <img src="https://www.talkwalker.com/images/2020/blog-headers/image-analysis.png" class="w-16 h-16 rounded-full" alt="">
+                    <span class="font-bold text-gray-600 mt-2">Thomello's Room</span>
+                    <div>Get Started</div>
+                    <div class="bg-blue-200 py-2 items-center mt-4 w-full rounded-lg text-blue-500 font-bold" style="text-align: center;">Join</div>
+                </div>
+
+                <div class="border-sm border p-3 hover:bg-gray-100 rounded-lg border-gray-200 flex flex-col items-center w-52 ">
+                    <img src="https://www.talkwalker.com/images/2020/blog-headers/image-analysis.png" class="w-16 h-16 rounded-full" alt="">
+                    <span class="font-bold text-gray-600 mt-2">Thomello's Room</span>
+                    <div>Get Started</div>
+                    <div class="bg-transparent py-2 items-center mt-4 w-full border-2 border-blue-200 rounded-lg text-blue-500 font-bold" style="text-align: center;">Say Hi</div>
+                </div>
+
+            </div>
+
+            <div class="flex flex-col justify-between mt-6 bg-white rounded-md">
+
+                <div class="w-full flex justify-between items-center px-8 bg-white rounded-t-md h-24">
+                    <div class="flex">
+                        <div class="mr-3">
+                            <img class="h-12 w-12 rounded-full p-1 bg-blue-600" src="https://www.talkwalker.com/images/2020/blog-headers/image-analysis.png" alt="">
+                        </div>
+        
+                        <div class="flex flex-col">
+                            <div class="font-bold">Thomello Mats'asa</div>
+                            <div class="text-sm">4 hours ago</div>
+                        </div>
+                    </div>
+                    <div class="w-10 h-10 bg-transparent hover:bg-gray-200 rounded-full p-2">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path></svg>
+                    </div>
+                </div>
+        
+        
+                <div class="w-full bg-red-100 h-full bg-cover bg-center">
+                    <img class="cover" src="https://s3-us-west-2.amazonaws.com/robogarden-new/Articles/upload/blogs/lg-leverage-of-coding.jpg" alt="">
+                </div>
+        
+        
+        
+                <div class="w-full flex justify-between items-center rounded-b-md px-20 bg-white h-16">
+                    <button class="bg-transparent flex hover:bg-gray-200 py-2 px-20 rounded-md">
+                        <div><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path></svg></div>
+                        <div class="ml-2">Like</div>
+                    </button>
+        
+                    <button class="bg-transparent flex hover:bg-gray-200 py-2 px-20 rounded-md">
+                        <div><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg></div>
+                        <div class="ml-2">Comment</div>                
+                    </button>
+                </div>
+        
+        
+            </div>
+
+        </div>
+
+
+        <div class="h-screen w-3/5 pt-4 pl-16 font-bold text-lg">
+
+            
+
+            <span class="text-gray-500 text-md">Sponsored</span>
+
+            <div class="hover:bg-gray-200 rounded-md p-2 flex items-center">
+                <img src="https://images.unsplash.com/photo-1542293787938-c9e299b880cc?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8OHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=500&q=60" class="rounded-lg w-28 h-28 mt-3" alt="">
+                <div class="flex flex-col ml-4">
+                    <strong class="text-gray-700">US Software Opportunities</strong>
+                    <span class="text-xs text-gray-500">usware.com</span>
+                </div>
+            </div>
+
+            <div class="hover:bg-gray-200 rounded-md p-2 flex items-center">
+                <img src="https://images.unsplash.com/photo-1542328689-df6c076c1604?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=635&q=80" class="rounded-lg w-28 h-28 mt-3" alt="">
+                <div class="flex flex-col ml-4">
+                    <strong class="text-gray-700">Deep M.</strong>
+                    <span class="text-xs text-gray-500">deepm.com</span>
+                </div>
+            </div>
+
+
+            <hr class="bg-gray-500 my-2 border">
+
+            <div class="flex items-center justify-between pr-3">
+                <div class="text-gray-600 text-lg font-semibold ml-4">Your Pages</div>
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path></svg>
+            </div>
+
+            <div class="flex items-center mt-3 hover:bg-gray-200 p-1 rounded-md">
+                <img class="rounded-full w-8 h-8" src="https://scontent.xx.fbcdn.net/v/t1.0-1/cp0/p50x50/95734360_119403693081316_3469584146324520960_n.png?_nc_cat=106&ccb=1-3&_nc_sid=dbb9e7&_nc_ohc=yRZaKVxwRw8AX8g1Jwb&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&_nc_tp=30&oh=b28bd43529ff32cc3dd4541c86461233&oe=60699D9C" alt="">
+                <span class="text-sm ml-2">Thusanang Educational Network</span>
+            </div>
+            <div  class="ml-5 text-gray-500 text-xs p-2 hover:bg-gray-200 rounded-md flex items-center" >
+                <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+
+                1 Message</div>
+            <div class="ml-5 text-gray-500 text-xs p-2 hover:bg-gray-200 rounded-md flex items-center" >
+                <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
+
+                1 Notification</div>
+            <div class="ml-5 text-gray-500 text-xs p-2 hover:bg-gray-200 rounded-md flex items-center" >
+                <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"></path></svg>
+
+                Create Promotion</div>
+
+            <hr class="bg-gray-500 my-2 border">
+
+            <div class="flex items-center justify-between pr-3">
+                <div class="text-gray-600 text-lg font-semibold ml-4">Your Pages</div>
+               <span class="text-blue-500 text-sm">See All </span>
+            </div> 
+        </div>
+    </div> 
+
+</body>
+
+
+</html>

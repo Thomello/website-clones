@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+    <title>Youtube Clone</title>
+</head>
+<body class="bg-gray-100">
+    <div class="flex flex-col min-h-screen h-screen overflow-y-hidden">
+
+
+        <div class="bg-white flex justify-between items-center px-5 py-3">
+            <div class="flex space-x-5 items-center">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+
+                <img src="http://www.widespreadpromotion.com/wp-content/uploads/2019/08/flat1000x1000075f.u7.jpg" width="80" height="24"  alt="">
+
+            </div>
+
+            <div class="flex justify-between items-center" style="width: 670px; height: 32px;"> 
+                    <input type="text" class="bg-transparent h-full w-full focus:outline-none pl-3 py-3 text-gray-400 text-md border border-gray-400 " placeholder="Search">
+                
+                <div class="bg-gray-100 hover:bg-gray-200 h-full px-6 py-2 border-r border-t border-b border-gray-400">
+                    <svg class="w-4 h-4" fill="none" stroke="gray" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                </div>
+
+                <svg class="w-7 h-7 ml-4" fill="gray" stroke="gray" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
+            </div>
+
+
+            <div class="flex items-center space-x-8"> 
+                <div>
+                    <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" fill="gray" class="w-6 h-6 style-scope yt-icon" style="pointer-events: none; display: block;"><g class="style-scope yt-icon"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4zM14 13h-3v3H9v-3H6v-2h3V8h2v3h3v2z" class="style-scope yt-icon"></path></g></svg> 
+                </div>
+
+                <div>
+                    <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" fill="gray" class="h-6 w-6 style-scope yt-icon" style="pointer-events: none; display: block;"><g class="style-scope yt-icon"><path d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z" class="style-scope yt-icon"></path></g></svg>
+                </div>
+
+                <div>
+                    <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" fill="gray" class="w-6 h-6 style-scope yt-icon" style="pointer-events: none; display: block;"><g class="style-scope yt-icon"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z" class="style-scope yt-icon"></path></g></svg>
+                </div>
+
+                <div>
+                    <img src="https://lh3.googleusercontent.com/ogw/ADGmqu_euxRSfe1dROlju9152iwBb6ymr-5sMY9gEWz6=s32-c-mo" class="rounded-full" alt="">
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <div class="bg-red-200 flex-1 flex h-screen">
+            
+            <div class="bg-white w-56 overflow-y-auto">
+                <div class="flex items-center bg-gray-200 pl-6 py-2 space-x-6 mt-2 cursor-pointer">
+                    <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" fill="red" class="w-6 h-6" class="style-scope yt-icon" style="pointer-events: none; display: block;"><g class="style-scope yt-icon"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8" class="style-scope yt-icon"></path></g></svg>
+                    <span class="font-semibold">Home</span>
+                </div>
+                <div class="flex items-center hover:bg-gray-100 pl-6 py-2 space-x-6 cursor-pointer">
+                    <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" fill="gray" class="w-6 h-6 style-scope yt-icon" style="pointer-events: none; display: block;"><g class="style-scope yt-icon"><path d="M17.53 11.2c-.23-.3-.5-.56-.76-.82-.65-.6-1.4-1.03-2.03-1.66-1.46-1.46-1.78-3.87-.85-5.72-.9.23-1.75.75-2.45 1.32C8.9 6.4 7.9 10.07 9.1 13.22c.04.1.08.2.08.33 0 .22-.15.42-.35.5-.22.1-.46.04-.64-.12-.06-.05-.1-.1-.15-.17-1.1-1.43-1.28-3.48-.53-5.12C5.87 10 5 12.3 5.12 14.47c.04.5.1 1 .27 1.5.14.6.4 1.2.72 1.73 1.04 1.73 2.87 2.97 4.84 3.22 2.1.27 4.35-.12 5.96-1.6 1.8-1.66 2.45-4.3 1.5-6.6l-.13-.26c-.2-.45-.47-.87-.78-1.25zm-3.1 6.3c-.28.24-.73.5-1.08.6-1.1.38-2.2-.16-2.88-.82 1.2-.28 1.9-1.16 2.1-2.05.17-.8-.14-1.46-.27-2.23-.12-.74-.1-1.37.2-2.06.15.38.35.76.58 1.06.76 1 1.95 1.44 2.2 2.8.04.14.06.28.06.43.03.82-.32 1.72-.92 2.26z" class="style-scope yt-icon"></path></g></svg>
+                    <span class="text-gray-800">Trending</span>
+                </div>
+                <div class="flex items-center hover:bg-gray-100 pl-6 py-2 space-x-6 cursor-pointer">
+                    <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" fill="gray" class="w-6 h-6 style-scope yt-icon" style="pointer-events: none; display: block;"><g class="style-scope yt-icon"><path d="M18.7 8.7H5.3V7h13.4v1.7zm-1.7-5H7v1.6h10V3.7zm3.3 8.3v6.7c0 1-.7 1.6-1.6 1.6H5.3c-1 0-1.6-.7-1.6-1.6V12c0-1 .7-1.7 1.6-1.7h13.4c1 0 1.6.8 1.6 1.7zm-5 3.3l-5-2.7V18l5-2.7z" class="style-scope yt-icon"></path></g></svg>
+                    <span class="text-gray-800">Subscription</span>
+                </div>
+
+                <hr class="bg-gray-300 my-2">
+                
+                <div class="flex items-center hover:bg-gray-100 pl-6 py-2 space-x-6 cursor-pointer">
+                    <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" fill="gray" class="w-6 h-6 style-scope yt-icon" style="pointer-events: none; display: block;"><g class="style-scope yt-icon"><path fill="none" d="M0 0h24v24H0z" class="style-scope yt-icon"></path><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8 12.5v-9l6 4.5-6 4.5z" class="style-scope yt-icon"></path></g></svg>
+                    <span class="text-gray-800">Library</span>
+                </div>
+                <div class="flex items-center hover:bg-gray-100 pl-6 py-2 space-x-6 cursor-pointer">
+                    <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" fill="gray" class="w-6 h-6 style-scope yt-icon" style="pointer-events: none; display: block;"><g class="style-scope yt-icon"><path d="M11.9 3.75c-4.55 0-8.23 3.7-8.23 8.25H.92l3.57 3.57.04.13 3.7-3.7H5.5c0-3.54 2.87-6.42 6.42-6.42 3.54 0 6.4 2.88 6.4 6.42s-2.86 6.42-6.4 6.42c-1.78 0-3.38-.73-4.54-1.9l-1.3 1.3c1.5 1.5 3.55 2.43 5.83 2.43 4.58 0 8.28-3.7 8.28-8.25 0-4.56-3.7-8.25-8.26-8.25zM11 8.33v4.6l3.92 2.3.66-1.1-3.2-1.9v-3.9H11z" class="style-scope yt-icon"></path></g></svg>
+                    <span class="text-gray-800">History</span>
+                </div>
+                <div class="flex items-center hover:bg-gray-100 pl-6 py-2 space-x-6 cursor-pointer">
+                    <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" fill="gray" class="w-6 h-6 style-scope yt-icon" style="pointer-events: none; display: block;"><g class="style-scope yt-icon"><path d="M18.4 5.6v12.8H5.6V5.6h12.8zm0-1.8H5.6a1.8 1.8 0 0 0-1.8 1.8v12.8a1.8 1.8 0 0 0 1.8 1.9h12.8a1.8 1.8 0 0 0 1.9-1.9V5.6a1.8 1.8 0 0 0-1.9-1.8z" class="style-scope yt-icon"></path><path d="M10.2 9v6.5l5-3.2-5-3.2z" class="style-scope yt-icon"></path></g></svg>
+                    <span class="text-gray-800">Your videos</span>
+                </div>
+                <div class="flex items-center hover:bg-gray-100 pl-6 py-2 space-x-6 cursor-pointer">
+                    <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" fill="gray" class="w-6 h-6 style-scope yt-icon" style="pointer-events: none; display: block;"><g class="style-scope yt-icon"><path d="M12 3.67c-4.58 0-8.33 3.75-8.33 8.33s3.75 8.33 8.33 8.33 8.33-3.75 8.33-8.33S16.58 3.67 12 3.67zm3.5 11.83l-4.33-2.67v-5h1.25v4.34l3.75 2.25-.67 1.08z" class="style-scope yt-icon"></path></g></svg>
+                    <span class="text-gray-800">Watch later</span>
+                </div>
+                <div class="flex items-center hover:bg-gray-100 pl-6 py-2 space-x-6 cursor-pointer">
+                    <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" fill="gray" class="w-6 h-6 style-scope yt-icon" style="pointer-events: none; display: block;"><g class="style-scope yt-icon"><path d="M3.75 18.75h3v-9h-3v9zm16.5-8.25c0-.83-.68-1.5-1.5-1.5h-4.73l.7-3.43.03-.24c0-.3-.13-.6-.33-.8l-.8-.78L8.7 8.7c-.3.26-.45.64-.45 1.05v7.5c0 .82.67 1.5 1.5 1.5h6.75c.62 0 1.15-.38 1.38-.9l2.27-5.3c.06-.18.1-.36.1-.55v-1.5z" class="style-scope yt-icon"></path></g></svg>
+                    <span class="text-gray-800">Liked videos</span>
+                </div>
+
+                <hr class="bg-gray-300 my-2">
+                
+
+                <span class="text-gray-500 mb-2 ml-6 text-sm font-semibold">SUBSCRIPTIONS</span>
+
+                <div class="flex items-center hover:bg-gray-100 pl-6 py-2 space-x-6 cursor-pointer">
+                    <img src="https://yt3.ggpht.com/ytc/AAUvwnjemR-SWUUyJ_QdZGrIibQoBp0xKCNo4wDTPJ0wlA=s88-c-k-c0x00ffffff-no-rj" class="rounded-full w-5 h-5" alt="">
+                    <span class="text-gray-800">Channel</span>
+                </div>
+
+                <div class="flex items-center hover:bg-gray-100 pl-6 py-2 space-x-6 cursor-pointer">
+                    <img src="https://yt3.ggpht.com/ytc/AAUvwnjrx8sx6hIkX2qxc1kUlzT9KCtZ7zAy0zzel9YwhQ=s88-c-k-c0x00ffffff-no-rj" class="rounded-full w-5 h-5" alt="">
+                    <span class="text-gray-800">Channel</span>
+                </div>
+
+                <div class="flex items-center hover:bg-gray-100 pl-6 py-2 space-x-6 cursor-pointer">
+                    <img src="https://yt3.ggpht.com/ytc/AAUvwngrXUkbdKqh8tpspCYNrlSd1IWiDRX0mG58r0hp=s88-c-k-c0x00ffffff-no-rj" class="rounded-full w-5 h-5" alt="">
+                    <span class="text-gray-800">Channel</span>
+                </div>
+
+                <div class="flex items-center hover:bg-gray-100 pl-6 py-2 space-x-6 cursor-pointer">
+                    <img src="https://yt3.ggpht.com/ytc/AAUvwnipIOGF5oWVbSffcVHhvJm5guRr4A21wbbmy1NX=s88-c-k-c0x00ffffff-no-rj" class="rounded-full w-5 h-5" alt="">
+                    <span class="text-gray-800">Channel</span>
+                </div>
+
+                <div class="flex items-center hover:bg-gray-100 pl-6 py-2 space-x-6 cursor-pointer">
+                    <img src="https://yt3.ggpht.com/ytc/AAUvwniAIuJTf8tYaEkS8CxoEtSi04EvKpr3ou1tTKLFkg=s88-c-k-c0x00ffffff-no-rj" class="rounded-full w-5 h-5" alt="">
+                    <span class="text-gray-800">Channel</span>
+                </div>
+
+                <div class="flex items-center hover:bg-gray-100 pl-6 py-2 space-x-6 cursor-pointer">
+                    <img src="https://yt3.ggpht.com/ytc/AAUvwnipIOGF5oWVbSffcVHhvJm5guRr4A21wbbmy1NX=s88-c-k-c0x00ffffff-no-rj" class="rounded-full w-5 h-5" alt="">
+                    <span class="text-gray-800">Channel</span>
+                </div>
+
+                <div class="flex items-center hover:bg-gray-100 pl-6 py-2 space-x-6 cursor-pointer">
+                    <img src="https://yt3.ggpht.com/ytc/AAUvwngrXUkbdKqh8tpspCYNrlSd1IWiDRX0mG58r0hp=s88-c-k-c0x00ffffff-no-rj" class="rounded-full w-5 h-5" alt="">
+                    <span class="text-gray-800">Channel</span>
+                </div>
+
+                <div class="flex items-center hover:bg-gray-100 pl-6 py-2 space-x-6 cursor-pointer">
+                    <svg class="w-6 h-6" fill="none" stroke="gray" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    <span class="text-gray-800">Show 4 more</span>
+                </div>
+                
+                <hr class="bg-gray-300 my-2">
+
+                <div class="p-5">
+                    <span class="font-semibold text-xs">About Press Copyright Contactus Creator Advertise Developers</span>   
+                    <br><br>      
+                    
+                    <span class="font-semibold text-xs">Terms Privacy Policy & SafetyHow YouTube worksTest new features</span>
+    
+                    <span class="mb-5">© 2021 Google LLC</span>
+                </div>
+
+            </div>
+
+            <div class="bg-gray-100 flex-1 flex flex-col">
+
+                <div class="bg-white flex px-7 space-x-3 border-t py-3">
+                    <div class="bg-gray-500 text-gray-100  rounded-full py-1 px-3">
+                        All
+                    </div>
+                    <div class="bg-gray-200 hover:bg-gray-300 text-gray-700 border border-gray-300 rounded-full py-1 px-3">
+                        Angular JS
+                    </div>
+                    <div class="bg-gray-200 hover:bg-gray-300 text-gray-700 border border-gray-300 rounded-full py-1 px-3">
+                        Tailwind css
+                    </div>
+                    <div class="bg-gray-200 hover:bg-gray-300 text-gray-700 border border-gray-300 rounded-full py-1 px-3">
+                        SpaxeX
+                    </div>
+                    <div class="bg-gray-200 hover:bg-gray-300 text-gray-700 border border-gray-300 rounded-full py-1 px-3">
+                        Traversy Media
+                    </div>
+                    <div class="bg-gray-200 hover:bg-gray-300 text-gray-700 border border-gray-300 rounded-full py-1 px-3">
+                        Commedy
+                    </div>
+                     <div class="bg-gray-200 hover:bg-gray-300 text-gray-700 border border-gray-300 rounded-full py-1 px-3">
+                        Music
+                    </div>
+                     <div class="bg-gray-200 hover:bg-gray-300 text-gray-700 border border-gray-300 rounded-full py-1 px-3">
+                        Coding
+                    </div>
+                    <div class="bg-gray-200 hover:bg-gray-300 text-gray-700 border border-gray-300 rounded-full py-1 px-3">
+                        Tonny Robbins
+                    </div>
+                    <div class="bg-gray-200 hover:bg-gray-300 text-gray-700 border border-gray-300 rounded-full py-1 px-3">
+                        Jack-Ma
+                    </div>
+                    
+                </div>
+
+                <div class="bg-gray-100 flex-1 p-5 grid grid-cols-4 gap-4 overflow-y-auto">
+                    <div class="flex flex-col">
+
+                        <div class="w-64 h-auto">
+                            <img src="https://marketingweek.imgix.net/content/uploads/2017/05/12103909/Coding-body-image-.jpg?auto=compress,format&q=60&w=750&h=460" alt="">
+                        </div>
+
+                        <div class="flex mt-3 p-1 space-x-2">
+                            <div class="">
+                                <img src="https://yt3.ggpht.com/ytc/AAUvwng963DN2_MIbKuvMWRrN4KG920h3Y4YHg6KET9vZg=s68-c-k-c0x00ffffff-no-rj" class="rounded-full w-10 h-10" alt="">
+                            </div>
+                            <div class="flex flex-col">
+                                <div class="font-semibold">React & Tailwind Css Gallery</div>
+                                <div class="text-gray-500">Traversy Media</div>
+                                <div class="text-gray-500">85k views . 11 months ago</div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="flex flex-col">
+
+                        <div class="w-64 h-auto">
+                            <img src="https://marketingweek.imgix.net/content/uploads/2017/05/12103909/Coding-body-image-.jpg?auto=compress,format&q=60&w=750&h=460" alt="">
+                        </div>
+
+                        <div class="flex mt-3 p-1 space-x-2">
+                            <div class="">
+                                <img src="https://yt3.ggpht.com/ytc/AAUvwng963DN2_MIbKuvMWRrN4KG920h3Y4YHg6KET9vZg=s68-c-k-c0x00ffffff-no-rj" class="rounded-full w-10 h-10" alt="">
+                            </div>
+                            <div class="flex flex-col">
+                                <div class="font-semibold">React & Tailwind Css Gallery</div>
+                                <div class="text-gray-500">Traversy Media</div>
+                                <div class="text-gray-500">85k views . 11 months ago</div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="flex flex-col">
+
+                        <div class="w-64 h-auto">
+                            <img src="https://marketingweek.imgix.net/content/uploads/2017/05/12103909/Coding-body-image-.jpg?auto=compress,format&q=60&w=750&h=460" alt="">
+                        </div>
+
+                        <div class="flex mt-3 p-1 space-x-2">
+                            <div class="">
+                                <img src="https://yt3.ggpht.com/ytc/AAUvwng963DN2_MIbKuvMWRrN4KG920h3Y4YHg6KET9vZg=s68-c-k-c0x00ffffff-no-rj" class="rounded-full w-10 h-10" alt="">
+                            </div>
+                            <div class="flex flex-col">
+                                <div class="font-semibold">React & Tailwind Css Gallery</div>
+                                <div class="text-gray-500">Traversy Media</div>
+                                <div class="text-gray-500">85k views . 11 months ago</div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="flex flex-col">
+
+                        <div class="w-64 h-auto">
+                            <img src="https://marketingweek.imgix.net/content/uploads/2017/05/12103909/Coding-body-image-.jpg?auto=compress,format&q=60&w=750&h=460" alt="">
+                        </div>
+
+                        <div class="flex mt-3 p-1 space-x-2">
+                            <div class="">
+                                <img src="https://yt3.ggpht.com/ytc/AAUvwng963DN2_MIbKuvMWRrN4KG920h3Y4YHg6KET9vZg=s68-c-k-c0x00ffffff-no-rj" class="rounded-full w-10 h-10" alt="">
+                            </div>
+                            <div class="flex flex-col">
+                                <div class="font-semibold">React & Tailwind Css Gallery</div>
+                                <div class="text-gray-500">Traversy Media</div>
+                                <div class="text-gray-500">85k views . 11 months ago</div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="flex flex-col">
+
+                        <div class="w-64 h-auto">
+                            <img src="https://marketingweek.imgix.net/content/uploads/2017/05/12103909/Coding-body-image-.jpg?auto=compress,format&q=60&w=750&h=460" alt="">
+                        </div>
+
+                        <div class="flex mt-3 p-1 space-x-2">
+                            <div class="">
+                                <img src="https://yt3.ggpht.com/ytc/AAUvwng963DN2_MIbKuvMWRrN4KG920h3Y4YHg6KET9vZg=s68-c-k-c0x00ffffff-no-rj" class="rounded-full w-10 h-10" alt="">
+                            </div>
+                            <div class="flex flex-col">
+                                <div class="font-semibold">React & Tailwind Css Gallery</div>
+                                <div class="text-gray-500">Traversy Media</div>
+                                <div class="text-gray-500">85k views . 11 months ago</div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="flex flex-col">
+
+                        <div class="w-64 h-auto">
+                            <img src="https://marketingweek.imgix.net/content/uploads/2017/05/12103909/Coding-body-image-.jpg?auto=compress,format&q=60&w=750&h=460" alt="">
+                        </div>
+
+                        <div class="flex mt-3 p-1 space-x-2">
+                            <div class="">
+                                <img src="https://yt3.ggpht.com/ytc/AAUvwng963DN2_MIbKuvMWRrN4KG920h3Y4YHg6KET9vZg=s68-c-k-c0x00ffffff-no-rj" class="rounded-full w-10 h-10" alt="">
+                            </div>
+                            <div class="flex flex-col">
+                                <div class="font-semibold">React & Tailwind Css Gallery</div>
+                                <div class="text-gray-500">Traversy Media</div>
+                                <div class="text-gray-500">85k views . 11 months ago</div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="flex flex-col">
+
+                        <div class="w-64 h-auto">
+                            <img src="https://marketingweek.imgix.net/content/uploads/2017/05/12103909/Coding-body-image-.jpg?auto=compress,format&q=60&w=750&h=460" alt="">
+                        </div>
+
+                        <div class="flex mt-3 p-1 space-x-2">
+                            <div class="">
+                                <img src="https://yt3.ggpht.com/ytc/AAUvwng963DN2_MIbKuvMWRrN4KG920h3Y4YHg6KET9vZg=s68-c-k-c0x00ffffff-no-rj" class="rounded-full w-10 h-10" alt="">
+                            </div>
+                            <div class="flex flex-col">
+                                <div class="font-semibold">React & Tailwind Css Gallery</div>
+                                <div class="text-gray-500">Traversy Media</div>
+                                <div class="text-gray-500">85k views . 11 months ago</div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="flex flex-col">
+
+                        <div class="w-64 h-auto">
+                            <img src="https://marketingweek.imgix.net/content/uploads/2017/05/12103909/Coding-body-image-.jpg?auto=compress,format&q=60&w=750&h=460" alt="">
+                        </div>
+
+                        <div class="flex mt-3 p-1 space-x-2">
+                            <div class="">
+                                <img src="https://yt3.ggpht.com/ytc/AAUvwng963DN2_MIbKuvMWRrN4KG920h3Y4YHg6KET9vZg=s68-c-k-c0x00ffffff-no-rj" class="rounded-full w-10 h-10" alt="">
+                            </div>
+                            <div class="flex flex-col">
+                                <div class="font-semibold">React & Tailwind Css Gallery</div>
+                                <div class="text-gray-500">Traversy Media</div>
+                                <div class="text-gray-500">85k views . 11 months ago</div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="flex flex-col">
+
+                        <div class="w-64 h-auto">
+                            <img src="https://marketingweek.imgix.net/content/uploads/2017/05/12103909/Coding-body-image-.jpg?auto=compress,format&q=60&w=750&h=460" alt="">
+                        </div>
+
+                        <div class="flex mt-3 p-1 space-x-2">
+                            <div class="">
+                                <img src="https://yt3.ggpht.com/ytc/AAUvwng963DN2_MIbKuvMWRrN4KG920h3Y4YHg6KET9vZg=s68-c-k-c0x00ffffff-no-rj" class="rounded-full w-10 h-10" alt="">
+                            </div>
+                            <div class="flex flex-col">
+                                <div class="font-semibold">React & Tailwind Css Gallery</div>
+                                <div class="text-gray-500">Traversy Media</div>
+                                <div class="text-gray-500">85k views . 11 months ago</div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="flex flex-col">
+
+                        <div class="w-64 h-auto">
+                            <img src="https://marketingweek.imgix.net/content/uploads/2017/05/12103909/Coding-body-image-.jpg?auto=compress,format&q=60&w=750&h=460" alt="">
+                        </div>
+
+                        <div class="flex mt-3 p-1 space-x-2">
+                            <div class="">
+                                <img src="https://yt3.ggpht.com/ytc/AAUvwng963DN2_MIbKuvMWRrN4KG920h3Y4YHg6KET9vZg=s68-c-k-c0x00ffffff-no-rj" class="rounded-full w-10 h-10" alt="">
+                            </div>
+                            <div class="flex flex-col">
+                                <div class="font-semibold">React & Tailwind Css Gallery</div>
+                                <div class="text-gray-500">Traversy Media</div>
+                                <div class="text-gray-500">85k views . 11 months ago</div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="flex flex-col">
+
+                        <div class="w-64 h-auto">
+                            <img src="https://marketingweek.imgix.net/content/uploads/2017/05/12103909/Coding-body-image-.jpg?auto=compress,format&q=60&w=750&h=460" alt="">
+                        </div>
+
+                        <div class="flex mt-3 p-1 space-x-2">
+                            <div class="">
+                                <img src="https://yt3.ggpht.com/ytc/AAUvwng963DN2_MIbKuvMWRrN4KG920h3Y4YHg6KET9vZg=s68-c-k-c0x00ffffff-no-rj" class="rounded-full w-10 h-10" alt="">
+                            </div>
+                            <div class="flex flex-col">
+                                <div class="font-semibold">React & Tailwind Css Gallery</div>
+                                <div class="text-gray-500">Traversy Media</div>
+                                <div class="text-gray-500">85k views . 11 months ago</div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="flex flex-col">
+
+                        <div class="w-64 h-auto">
+                            <img src="https://marketingweek.imgix.net/content/uploads/2017/05/12103909/Coding-body-image-.jpg?auto=compress,format&q=60&w=750&h=460" alt="">
+                        </div>
+
+                        <div class="flex mt-3 p-1 space-x-2">
+                            <div class="">
+                                <img src="https://yt3.ggpht.com/ytc/AAUvwng963DN2_MIbKuvMWRrN4KG920h3Y4YHg6KET9vZg=s68-c-k-c0x00ffffff-no-rj" class="rounded-full w-10 h-10" alt="">
+                            </div>
+                            <div class="flex flex-col">
+                                <div class="font-semibold">React & Tailwind Css Gallery</div>
+                                <div class="text-gray-500">Traversy Media</div>
+                                <div class="text-gray-500">85k views . 11 months ago</div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="flex flex-col">
+
+                        <div class="w-64 h-auto">
+                            <img src="https://marketingweek.imgix.net/content/uploads/2017/05/12103909/Coding-body-image-.jpg?auto=compress,format&q=60&w=750&h=460" alt="">
+                        </div>
+
+                        <div class="flex mt-3 p-1 space-x-2">
+                            <div class="">
+                                <img src="https://yt3.ggpht.com/ytc/AAUvwng963DN2_MIbKuvMWRrN4KG920h3Y4YHg6KET9vZg=s68-c-k-c0x00ffffff-no-rj" class="rounded-full w-10 h-10" alt="">
+                            </div>
+                            <div class="flex flex-col">
+                                <div class="font-semibold">React & Tailwind Css Gallery</div>
+                                <div class="text-gray-500">Traversy Media</div>
+                                <div class="text-gray-500">85k views . 11 months ago</div>
+                            </div>
+                        </div>
+                    </div>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+</body>
+</html>

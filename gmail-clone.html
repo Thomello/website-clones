@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+    <title>Gmail Clone - Tailwind</title>
+</head>
+
+<body class="bg-white">
+    <div class="flex flex-col min-h-screen h-screen">
+
+        <div class="bg-white flex justify-between items-center">
+            <div class="flex px-3 py-2 items-center">
+                <div class="hover:bg-gray-200 rounded-full p-3">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </div>
+
+                <div class="ml-2">
+                    <img src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_default_1x_r2.png" alt="">
+                </div>
+ 
+                <div class="bg-gray-100 rounded-lg ml-16 w-80 flex items-center p-1" style="width: 650px;">
+                    <div class="hover:bg-gray-300 rounded-full p-2">
+                        <svg class="w-5 h-5" fill="none" stroke="gray" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    </div>
+                    <div class="ml-3 flex justify-between">
+                        <input type="text" class="bg-gray-100 focus:outline-none" placeholder="Search mail" style="width: 560px;">
+
+                        <div class="hover:bg-gray-200 rounded-full p-1">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </div>
+
+                    </div>
+
+                    
+                </div>
+            </div>
+
+            <div class="flex items-center mr-2">
+                
+                <div class="hover:bg-gray-100 rounded-full p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="gray" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                </div>  
+                <div class="hover:bg-gray-100 rounded-full p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="gray" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                </div>  
+                <div class="hover:bg-gray-100 rounded-full p-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" class="bi bi-grid-3x3-gap-fill" viewBox="0 0 16 16">
+                        <path d="M1 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V2zM1 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V7zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V7zM1 12a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2z"/>
+                      </svg>
+                </div>  
+                <div class="hover:bg-gray-100 rounded-full p-1">
+                    <img src="https://lh3.googleusercontent.com/ogw/ADGmqu_euxRSfe1dROlju9152iwBb6ymr-5sMY9gEWz6=s32-c-mo" class="rounded-full" alt="">
+                </div> 
+            </div>
+
+        </div>
+
+
+        <div class=" flex-1 flex justify-between overflow-y-hidden">
+
+            <div class="bg-white w-60 flex-none flex flex-col justify-between ">
+                <button class="bg-white ml-2 my-4 w-40 flex items-center px-3 py-2 border border-gray-200 rounded-full shadow-lg hover:shadow-2xl">
+                    <img src="https://www.gstatic.com/images/icons/material/colored_icons/1x/create_32dp.png" alt="">
+                    <span class="ml-4 mr-2 font-semibold text-gray-600">
+                        Compose
+                    </span>
+                </button>
+
+                <div class="h-full">
+                    <div class="bg-white">
+                        
+                        <div class="flex space-x-4 pl-4 bg-red-100 py-1 rounded-r-full ">
+                            <img src="https://www.gstatic.com/images/icons/material/system/1x/inbox_gm_googlered600_20dp.png" class="w-5 h-5" alt="">
+                            <strong class="text-red-500">Inbox</strong>
+                            <strong class="pl-16 text-red-500">143</strong>
+                        </div>
+
+                        <div class="flex space-x-4 pl-4 hover:bg-gray-100 py-1 rounded-r-full">
+                            <img src="https://www.gstatic.com/images/icons/material/system/1x/grade_black_20dp.png" class="w-5 h-5" alt="">
+                            <span class="text-gray-700">Starred</span>
+                        </div>
+                        <div class="flex space-x-4 pl-4 hover:bg-gray-100 py-1 rounded-r-full">
+                            <img src="https://www.gstatic.com/images/icons/material/system/1x/watch_later_black_20dp.png" class="w-5 h-5" alt="">
+                            <span class="text-gray-700">Snoozed</span>
+                        </div>
+                        <div class="flex space-x-4 pl-4 hover:bg-gray-100 py-1 rounded-r-full">
+                            <img src="https://www.gstatic.com/images/icons/material/system/1x/send_black_20dp.png" class="w-5 h-5" alt="">
+                            <span class="text-gray-700">Sent</span>
+                        </div>
+                        <div class="flex space-x-4 pl-4 hover:bg-gray-100 py-1 rounded-r-full">
+                            <img src="https://www.gstatic.com/images/icons/material/system/1x/insert_drive_file_black_20dp.png" class="w-5 h-5" alt="">
+                            <span class="text-gray-700">Drafts</span>
+                        </div>
+                        <div class="flex space-x-4 pl-4 hover:bg-gray-100 py-1 rounded-r-full">
+                            <svg class="w-5 h-5" fill="none" stroke="gray" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7"></path></svg>
+                            <span class="text-gray-700">smsMail</span>
+                        </div>
+                        <div class="flex space-x-4 pl-4 hover:bg-gray-100 py-1 rounded-r-full">
+                            <svg class="w-5 h-5" fill="none" stroke="gray" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7"></path></svg>
+                            <span class="text-gray-700">Unwanted</span>
+                        </div>
+                        <div class="flex space-x-4 pl-4 hover:bg-gray-100 py-1 rounded-r-full">
+                            <svg class="w-5 h-5" fill="none" stroke="gray" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            <span class="text-gray-700">More</span>
+                        </div>
+                        
+                    </div>
+
+
+                    <hr class="my-2 bg-gray-300">
+
+                    <div class=" ">
+
+                        <span class="font-semibold pl-4">Meet</span>
+
+                        <div class="flex space-x-4 pl-4 hover:bg-gray-100 py-1 rounded-r-full">
+                            <img src="https://www.gstatic.com/images/icons/material/system/1x/videocam_black_20dp.png" class="w-5 h-5" alt="">
+                            <span>Starred</span>
+                        </div>
+
+                        <div class="flex space-x-4 pl-4 hover:bg-gray-100 py-1 rounded-r-full">
+                            <img src="https://www.gstatic.com/images/icons/material/system/1x/keyboard_black_20dp.png" class="w-5 h-5" alt="">
+                            <span>Join a Meeting</span>
+                        </div>
+
+                    <hr class="my-3 bg-gray-300">
+                    </div>
+
+
+                    <div class="">
+                        <span class="font-semibold pl-4">Hangouts</span>
+
+                        <div class="flex space-x-2 pl-4 items-center hover:bg-gray-100 py-1 rounded-r-full">
+                            <img src="https://lh3.googleusercontent.com/a-/AOh14GjODCpIHaD_qvtsKsAR6KRtDFrmPwuIpXUG5NSk=s28-c-k-no" class="w-6 h-6 rounded-full" alt="">
+                            <span>Thomello</span>
+                            <svg class="w-3 h-3" fill="none" stroke="gray" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </div>
+
+                    </div>
+
+                    <hr class="my-2 bg-gray-300">
+
+                    <div class="flex flex-col items-center">
+                        <div class="text-gray-500 text-sm">No Recent Chats</div>
+                        <div class="text-blue-500 text-sm">Start a new one</div>
+                    </div>
+                </div>          
+                
+                <hr class="my-2 bg-gray-300">                
+
+                <div class="flex flex-row justify-center space-x-3 items-center">
+                    <div class="">
+                        <img src="//ssl.gstatic.com/ui/v1/icons/mail/wbt/contacts_icon21.png" alt="">
+                    </div>
+                    <div class="">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                    </div>
+                    <div class="">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="bg-white flex-grow">
+                <div class="p-2 space-x-1 flex items-center shadow-lg border-b">
+                    <div class="hover:bg-gray-100 rounded-full p-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" stroke="gray" class="bi bi-square" viewBox="0 0 16 16">
+                            <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                          </svg>                        
+                    </div>
+                    <div class="hover:bg-gray-100 rounded-full p-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" stroke="gray" width="16" height="16" fill="currentColor" class="h-5 w-5 bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
+                          <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
+                        </svg>
+                    </div>
+                    <div class="hover:bg-gray-100 rounded-full p-2">
+                        <svg class="w-5 h-5" stroke="gray" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"></path></svg>
+                    </div>
+
+
+
+                </div>
+                <div class="bg-white h-full overflow-y-auto"> 
+                    <div class="p-2 flex items-center justify-between ">
+                        <div class="hover:bg-gray-100 flex items-center rounded-md p-2 px-3">
+                            <svg class="w-4 h-4" fill="none" stroke="gray" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            <span class="ml-3 font-semibold text-gray-800">Important</span>
+                        </div>
+                        
+                        <div class="hover:bg-gray-100 rounded-full p-2">
+                            <svg class="w-5 h-5" stroke="gray" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"></path></svg>
+                        </div>
+
+                    </div>
+
+                    <hr class="bg-gray-300">
+
+                    <div class="p-2 flex items-center justify-between ">
+                        <div class="bg-gray-100 rounded-md p-2 flex items-center  px-3">                            
+
+                            <svg class="w-4 h-4" fill="none" stroke="gray" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
+
+                            <span class="ml-3 font-semibold text-gray-800">Everything Else</span>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="hover:bg-gray-100 rounded-md p-2">
+                                <span class="text-xs text-gray-500">1-50 of 7,227</span>
+                            </div>
+                            <div class="hover:bg-gray-100 rounded-full p-2">
+                                <svg class="w-5 h-5" stroke="gray" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"></path></svg>
+                            </div>
+                        </div>
+                        
+
+                    </div>
+
+                    <hr class="bg-gray-300">
+
+                    <div class="flex justify-between items-center py-3 px-3">
+                        <div class="flex items-center space-x-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" stroke="gray" class="bi bi-square" viewBox="0 0 16 16">
+                                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                              </svg> 
+
+                              <svg class="w-6 h-6" fill="none" stroke="lightgray" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="" stroke-linejoin="" stroke-width="1.2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" stroke-width="0.1" stroke="lightgray" class="w-5 h-5 bi bi-caret-right" viewBox="0 0 16 16">
+                                <path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753l5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
+                              </svg>
+
+                              <strong class="text-gray-600">Facebook</strong>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-gray-200 text-sm rounded-md mr-2" style="padding: 2px;">
+                                smsMail
+                            </div>
+                            <strong class="text-md text-gray-600">Lorem ipsum dolor dolordolor dolordolor dolor dolor sit. </strong>
+                            <span class="text-gray-500 text-md"> - Lorem  ipsum dolor ...</span>
+                        </div>
+                        <div class="">
+                            <strong class="text-sm text-gray-800">22:36</strong>
+                        </div>
+                    </div>
+
+                    <hr class="bg-gray-300">
+
+                    <div class="flex justify-between items-center py-3 px-3">
+                        <div class="flex items-center space-x-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" stroke="gray" class="bi bi-square" viewBox="0 0 16 16">
+                                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                              </svg> 
+
+                              <svg class="w-6 h-6" fill="none" stroke="lightgray" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="" stroke-linejoin="" stroke-width="1.2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" stroke-width="0.1" stroke="lightgray" class="w-5 h-5 bi bi-caret-right" viewBox="0 0 16 16">
+                                <path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753l5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
+                              </svg>
+
+                              <strong class="text-gray-600">Facebook</strong>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-gray-200 text-sm rounded-md mr-2" style="padding: 2px;">
+                                smsMail
+                            </div>
+                            <strong class="text-md text-gray-600">Lorem ipsum dolor dolordolor dolordolor dolor dolor sit. </strong>
+                            <span class="text-gray-500 text-md"> - Lorem  ipsum dolor ...</span>
+                        </div>
+                        <div class="">
+                            <strong class="text-sm text-gray-800">22:36</strong>
+                        </div>
+                    </div>
+
+                    <hr class="bg-gray-300">
+
+                    <div class="flex justify-between items-center py-3 px-3">
+                        <div class="flex items-center space-x-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" stroke="gray" class="bi bi-square" viewBox="0 0 16 16">
+                                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                              </svg> 
+
+                              <svg class="w-6 h-6" fill="none" stroke="lightgray" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="" stroke-linejoin="" stroke-width="1.2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" stroke-width="0.1" stroke="lightgray" class="w-5 h-5 bi bi-caret-right" viewBox="0 0 16 16">
+                                <path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753l5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
+                              </svg>
+
+                              <strong class="text-gray-600">Facebook</strong>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-gray-200 text-sm rounded-md mr-2" style="padding: 2px;">
+                                smsMail
+                            </div>
+                            <strong class="text-md text-gray-600">Lorem ipsum dolor dolordolor dolordolor dolor dolor sit. </strong>
+                            <span class="text-gray-500 text-md"> - Lorem  ipsum dolor ...</span>
+                        </div>
+                        <div class="">
+                            <strong class="text-sm text-gray-800">22:36</strong>
+                        </div>
+                    </div>
+
+                    <hr class="bg-gray-300">
+
+                    <div class="flex justify-between items-center py-3 px-3">
+                        <div class="flex items-center space-x-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" stroke="gray" class="bi bi-square" viewBox="0 0 16 16">
+                                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                              </svg> 
+
+                              <svg class="w-6 h-6" fill="none" stroke="lightgray" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="" stroke-linejoin="" stroke-width="1.2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" stroke-width="0.1" stroke="lightgray" class="w-5 h-5 bi bi-caret-right" viewBox="0 0 16 16">
+                                <path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753l5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
+                              </svg>
+
+                              <strong class="text-gray-600">Facebook</strong>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-gray-200 text-sm rounded-md mr-2" style="padding: 2px;">
+                                smsMail
+                            </div>
+                            <strong class="text-md text-gray-600">Lorem ipsum dolor dolordolor dolordolor dolor dolor sit. </strong>
+                            <span class="text-gray-500 text-md"> - Lorem  ipsum dolor ...</span>
+                        </div>
+                        <div class="">
+                            <strong class="text-sm text-gray-800">22:36</strong>
+                        </div>
+                    </div>
+
+                    <hr class="bg-gray-300">
+
+                    <div class="flex justify-between items-center py-3 px-3">
+                        <div class="flex items-center space-x-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" stroke="gray" class="bi bi-square" viewBox="0 0 16 16">
+                                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                              </svg> 
+
+                              <svg class="w-6 h-6" fill="none" stroke="lightgray" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="" stroke-linejoin="" stroke-width="1.2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" stroke-width="0.1" stroke="lightgray" class="w-5 h-5 bi bi-caret-right" viewBox="0 0 16 16">
+                                <path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753l5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
+                              </svg>
+
+                              <strong class="text-gray-600">Facebook</strong>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-gray-200 text-sm rounded-md mr-2" style="padding: 2px;">
+                                smsMail
+                            </div>
+                            <strong class="text-md text-gray-600">Lorem ipsum dolor dolordolor dolordolor dolor dolor sit. </strong>
+                            <span class="text-gray-500 text-md"> - Lorem  ipsum dolor ...</span>
+                        </div>
+                        <div class="">
+                            <strong class="text-sm text-gray-800">22:36</strong>
+                        </div>
+                    </div>
+
+                    <hr class="bg-gray-300">
+
+                    <div class="flex justify-between items-center py-3 px-3">
+                        <div class="flex items-center space-x-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" stroke="gray" class="bi bi-square" viewBox="0 0 16 16">
+                                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                              </svg> 
+
+                              <svg class="w-6 h-6" fill="none" stroke="lightgray" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="" stroke-linejoin="" stroke-width="1.2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" stroke-width="0.1" stroke="lightgray" class="w-5 h-5 bi bi-caret-right" viewBox="0 0 16 16">
+                                <path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753l5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
+                              </svg>
+
+                              <strong class="text-gray-600">Facebook</strong>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-gray-200 text-sm rounded-md mr-2" style="padding: 2px;">
+                                smsMail
+                            </div>
+                            <strong class="text-md text-gray-600">Lorem ipsum dolor dolordolor dolordolor dolor dolor sit. </strong>
+                            <span class="text-gray-500 text-md"> - Lorem  ipsum dolor ...</span>
+                        </div>
+                        <div class="">
+                            <strong class="text-sm text-gray-800">22:36</strong>
+                        </div>
+                    </div>
+
+                    <hr class="bg-gray-300">
+
+                    <div class="flex justify-between items-center py-3 px-3">
+                        <div class="flex items-center space-x-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" stroke="gray" class="bi bi-square" viewBox="0 0 16 16">
+                                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                              </svg> 
+
+                              <svg class="w-6 h-6" fill="none" stroke="lightgray" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="" stroke-linejoin="" stroke-width="1.2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" stroke-width="0.1" stroke="lightgray" class="w-5 h-5 bi bi-caret-right" viewBox="0 0 16 16">
+                                <path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753l5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
+                              </svg>
+
+                              <strong class="text-gray-600">Facebook</strong>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-gray-200 text-sm rounded-md mr-2" style="padding: 2px;">
+                                smsMail
+                            </div>
+                            <strong class="text-md text-gray-600">Lorem ipsum dolor dolordolor dolordolor dolor dolor sit. </strong>
+                            <span class="text-gray-500 text-md"> - Lorem  ipsum dolor ...</span>
+                        </div>
+                        <div class="">
+                            <strong class="text-sm text-gray-800">22:36</strong>
+                        </div>
+                    </div>
+
+                    <hr class="bg-gray-300">
+
+                    <div class="flex justify-between items-center py-3 px-3">
+                        <div class="flex items-center space-x-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" stroke="gray" class="bi bi-square" viewBox="0 0 16 16">
+                                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                              </svg> 
+
+                              <svg class="w-6 h-6" fill="none" stroke="lightgray" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="" stroke-linejoin="" stroke-width="1.2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" stroke-width="0.1" stroke="lightgray" class="w-5 h-5 bi bi-caret-right" viewBox="0 0 16 16">
+                                <path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753l5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
+                              </svg>
+
+                              <strong class="text-gray-600">Facebook</strong>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-gray-200 text-sm rounded-md mr-2" style="padding: 2px;">
+                                smsMail
+                            </div>
+                            <strong class="text-md text-gray-600">Lorem ipsum dolor dolordolor dolordolor dolor dolor sit. </strong>
+                            <span class="text-gray-500 text-md"> - Lorem  ipsum dolor ...</span>
+                        </div>
+                        <div class="">
+                            <strong class="text-sm text-gray-800">22:36</strong>
+                        </div>
+                    </div>
+
+                    <hr class="bg-gray-300">
+
+                    <div class="flex justify-between items-center py-3 px-3">
+                        <div class="flex items-center space-x-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" stroke="gray" class="bi bi-square" viewBox="0 0 16 16">
+                                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                              </svg> 
+
+                              <svg class="w-6 h-6" fill="none" stroke="lightgray" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="" stroke-linejoin="" stroke-width="1.2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" stroke-width="0.1" stroke="lightgray" class="w-5 h-5 bi bi-caret-right" viewBox="0 0 16 16">
+                                <path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753l5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
+                              </svg>
+
+                              <strong class="text-gray-600">Facebook</strong>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-gray-200 text-sm rounded-md mr-2" style="padding: 2px;">
+                                smsMail
+                            </div>
+                            <strong class="text-md text-gray-600">Lorem ipsum dolor dolordolor dolordolor dolor dolor sit. </strong>
+                            <span class="text-gray-500 text-md"> - Lorem  ipsum dolor ...</span>
+                        </div>
+                        <div class="">
+                            <strong class="text-sm text-gray-800">22:36</strong>
+                        </div>
+                    </div>
+
+                    <hr class="bg-gray-300">
+
+                    <div class="flex justify-between items-center py-3 px-3">
+                        <div class="flex items-center space-x-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" stroke="gray" class="bi bi-square" viewBox="0 0 16 16">
+                                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                              </svg> 
+
+                              <svg class="w-6 h-6" fill="none" stroke="lightgray" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="" stroke-linejoin="" stroke-width="1.2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" stroke-width="0.1" stroke="lightgray" class="w-5 h-5 bi bi-caret-right" viewBox="0 0 16 16">
+                                <path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753l5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
+                              </svg>
+
+                              <strong class="text-gray-600">Facebook</strong>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-gray-200 text-sm rounded-md mr-2" style="padding: 2px;">
+                                smsMail
+                            </div>
+                            <strong class="text-md text-gray-600">Lorem ipsum dolor dolordolor dolordolor dolor dolor sit. </strong>
+                            <span class="text-gray-500 text-md"> - Lorem  ipsum dolor ...</span>
+                        </div>
+                        <div class="">
+                            <strong class="text-sm text-gray-800">22:36</strong>
+                        </div>
+                    </div>
+
+                    <hr class="bg-gray-300">
+
+                    <div class="flex justify-between items-center py-3 px-3">
+                        <div class="flex items-center space-x-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" stroke="gray" class="bi bi-square" viewBox="0 0 16 16">
+                                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                              </svg> 
+
+                              <svg class="w-6 h-6" fill="none" stroke="lightgray" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="" stroke-linejoin="" stroke-width="1.2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" stroke-width="0.1" stroke="lightgray" class="w-5 h-5 bi bi-caret-right" viewBox="0 0 16 16">
+                                <path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753l5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
+                              </svg>
+
+                              <strong class="text-gray-600">Facebook</strong>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-gray-200 text-sm rounded-md mr-2" style="padding: 2px;">
+                                smsMail
+                            </div>
+                            <strong class="text-md text-gray-600">Lorem ipsum dolor dolordolor dolordolor dolor dolor sit. </strong>
+                            <span class="text-gray-500 text-md"> - Lorem  ipsum dolor ...</span>
+                        </div>
+                        <div class="">
+                            <strong class="text-sm text-gray-800">22:36</strong>
+                        </div>
+                    </div>
+
+                    <hr class="bg-gray-300">
+
+                    <div class="flex justify-between items-center py-3 px-3">
+                        <div class="flex items-center space-x-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" stroke="gray" class="bi bi-square" viewBox="0 0 16 16">
+                                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                              </svg> 
+
+                              <svg class="w-6 h-6" fill="none" stroke="lightgray" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="" stroke-linejoin="" stroke-width="1.2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" stroke-width="0.1" stroke="lightgray" class="w-5 h-5 bi bi-caret-right" viewBox="0 0 16 16">
+                                <path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753l5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
+                              </svg>
+
+                              <strong class="text-gray-600">Facebook</strong>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-gray-200 text-sm rounded-md mr-2" style="padding: 2px;">
+                                smsMail
+                            </div>
+                            <strong class="text-md text-gray-600">Lorem ipsum dolor dolordolor dolordolor dolor dolor sit. </strong>
+                            <span class="text-gray-500 text-md"> - Lorem  ipsum dolor ...</span>
+                        </div>
+                        <div class="">
+                            <strong class="text-sm text-gray-800">22:36</strong>
+                        </div>
+                    </div>
+
+                    <hr class="bg-gray-300">
+
+                    <div class="flex justify-between items-center py-3 px-3">
+                        <div class="flex items-center space-x-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" stroke="gray" class="bi bi-square" viewBox="0 0 16 16">
+                                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                              </svg> 
+
+                              <svg class="w-6 h-6" fill="none" stroke="lightgray" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="" stroke-linejoin="" stroke-width="1.2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" stroke-width="0.1" stroke="lightgray" class="w-5 h-5 bi bi-caret-right" viewBox="0 0 16 16">
+                                <path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753l5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
+                              </svg>
+
+                              <strong class="text-gray-600">Facebook</strong>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-gray-200 text-sm rounded-md mr-2" style="padding: 2px;">
+                                smsMail
+                            </div>
+                            <strong class="text-md text-gray-600">Lorem ipsum dolor dolordolor dolordolor dolor dolor sit. </strong>
+                            <span class="text-gray-500 text-md"> - Lorem  ipsum dolor ...</span>
+                        </div>
+                        <div class="">
+                            <strong class="text-sm text-gray-800">22:36</strong>
+                        </div>
+                    </div>
+
+                    <hr class="bg-gray-300">
+
+                    <div class="flex justify-between items-center py-3 px-3">
+                        <div class="flex items-center space-x-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" stroke="gray" class="bi bi-square" viewBox="0 0 16 16">
+                                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                              </svg> 
+
+                              <svg class="w-6 h-6" fill="none" stroke="lightgray" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="" stroke-linejoin="" stroke-width="1.2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" stroke-width="0.1" stroke="lightgray" class="w-5 h-5 bi bi-caret-right" viewBox="0 0 16 16">
+                                <path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753l5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
+                              </svg>
+
+                              <strong class="text-gray-600">Facebook</strong>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-gray-200 text-sm rounded-md mr-2" style="padding: 2px;">
+                                smsMail
+                            </div>
+                            <strong class="text-md text-gray-600">Lorem ipsum dolor dolordolor dolordolor dolor dolor sit. </strong>
+                            <span class="text-gray-500 text-md"> - Lorem  ipsum dolor ...</span>
+                        </div>
+                        <div class="">
+                            <strong class="text-sm text-gray-800">22:36</strong>
+                        </div>
+                    </div>
+
+                    <hr class="bg-gray-300">
+
+                    <div class="flex justify-between items-center py-3 px-3">
+                        <div class="flex items-center space-x-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" stroke="gray" class="bi bi-square" viewBox="0 0 16 16">
+                                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                              </svg> 
+
+                              <svg class="w-6 h-6" fill="none" stroke="lightgray" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="" stroke-linejoin="" stroke-width="1.2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" stroke-width="0.1" stroke="lightgray" class="w-5 h-5 bi bi-caret-right" viewBox="0 0 16 16">
+                                <path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753l5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
+                              </svg>
+
+                              <strong class="text-gray-600">Facebook</strong>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-gray-200 text-sm rounded-md mr-2" style="padding: 2px;">
+                                smsMail
+                            </div>
+                            <strong class="text-md text-gray-600">Lorem ipsum dolor dolordolor dolordolor dolor dolor sit. </strong>
+                            <span class="text-gray-500 text-md"> - Lorem  ipsum dolor ...</span>
+                        </div>
+                        <div class="">
+                            <strong class="text-sm text-gray-800">22:36</strong>
+                        </div>
+                    </div>
+
+                    <hr class="bg-gray-300">
+
+                    <div class="flex justify-between items-center py-3 px-3">
+                        <div class="flex items-center space-x-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" stroke="gray" class="bi bi-square" viewBox="0 0 16 16">
+                                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                              </svg> 
+
+                              <svg class="w-6 h-6" fill="none" stroke="lightgray" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="" stroke-linejoin="" stroke-width="1.2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" stroke-width="0.1" stroke="lightgray" class="w-5 h-5 bi bi-caret-right" viewBox="0 0 16 16">
+                                <path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753l5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
+                              </svg>
+
+                              <strong class="text-gray-600">Facebook</strong>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-gray-200 text-sm rounded-md mr-2" style="padding: 2px;">
+                                smsMail
+                            </div>
+                            <strong class="text-md text-gray-600">Lorem ipsum dolor dolordolor dolordolor dolor dolor sit. </strong>
+                            <span class="text-gray-500 text-md"> - Lorem  ipsum dolor ...</span>
+                        </div>
+                        <div class="">
+                            <strong class="text-sm text-gray-800">22:36</strong>
+                        </div>
+                    </div>
+
+                    <hr class="bg-gray-300">
+
+                    <div class="flex justify-between items-center py-3 px-3">
+                        <div class="flex items-center space-x-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" stroke="gray" class="bi bi-square" viewBox="0 0 16 16">
+                                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                              </svg> 
+
+                              <svg class="w-6 h-6" fill="none" stroke="lightgray" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="" stroke-linejoin="" stroke-width="1.2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" stroke-width="0.1" stroke="lightgray" class="w-5 h-5 bi bi-caret-right" viewBox="0 0 16 16">
+                                <path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753l5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
+                              </svg>
+
+                              <strong class="text-gray-600">Facebook</strong>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-gray-200 text-sm rounded-md mr-2" style="padding: 2px;">
+                                smsMail
+                            </div>
+                            <strong class="text-md text-gray-600">Lorem ipsum dolor dolordolor dolordolor dolor dolor sit. </strong>
+                            <span class="text-gray-500 text-md"> - Lorem  ipsum dolor ...</span>
+                        </div>
+                        <div class="">
+                            <strong class="text-sm text-gray-800">22:36</strong>
+                        </div>
+                    </div>
+
+                    <hr class="bg-gray-300">
+
+                    <div class="flex justify-between items-center py-3 px-3">
+                        <div class="flex items-center space-x-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" stroke="gray" class="bi bi-square" viewBox="0 0 16 16">
+                                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                              </svg> 
+
+                              <svg class="w-6 h-6" fill="none" stroke="lightgray" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="" stroke-linejoin="" stroke-width="1.2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" stroke-width="0.1" stroke="lightgray" class="w-5 h-5 bi bi-caret-right" viewBox="0 0 16 16">
+                                <path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753l5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
+                              </svg>
+
+                              <strong class="text-gray-600">Facebook</strong>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-gray-200 text-sm rounded-md mr-2" style="padding: 2px;">
+                                smsMail
+                            </div>
+                            <strong class="text-md text-gray-600">Lorem ipsum dolor dolordolor dolordolor dolor dolor sit. </strong>
+                            <span class="text-gray-500 text-md"> - Lorem  ipsum dolor ...</span>
+                        </div>
+                        <div class="">
+                            <strong class="text-sm text-gray-800">22:36</strong>
+                        </div>
+                    </div>
+
+                    <hr class="bg-gray-300">
+
+                    <div class="flex justify-between items-center py-3 px-3">
+                        <div class="flex items-center space-x-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" stroke="gray" class="bi bi-square" viewBox="0 0 16 16">
+                                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                              </svg> 
+
+                              <svg class="w-6 h-6" fill="none" stroke="lightgray" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="" stroke-linejoin="" stroke-width="1.2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" stroke-width="0.1" stroke="lightgray" class="w-5 h-5 bi bi-caret-right" viewBox="0 0 16 16">
+                                <path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753l5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
+                              </svg>
+
+                              <strong class="text-gray-600">Facebook</strong>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-gray-200 text-sm rounded-md mr-2" style="padding: 2px;">
+                                smsMail
+                            </div>
+                            <strong class="text-md text-gray-600">Lorem ipsum dolor dolordolor dolordolor dolor dolor sit. </strong>
+                            <span class="text-gray-500 text-md"> - Lorem  ipsum dolor ...</span>
+                        </div>
+                        <div class="">
+                            <strong class="text-sm text-gray-800">22:36</strong>
+                        </div>
+                    </div>
+
+                    <hr class="bg-gray-300">
+
+                    <div class="flex justify-between items-center py-3 px-3">
+                        <div class="flex items-center space-x-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" stroke="gray" class="bi bi-square" viewBox="0 0 16 16">
+                                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                              </svg> 
+
+                              <svg class="w-6 h-6" fill="none" stroke="lightgray" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="" stroke-linejoin="" stroke-width="1.2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" stroke-width="0.1" stroke="lightgray" class="w-5 h-5 bi bi-caret-right" viewBox="0 0 16 16">
+                                <path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753l5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
+                              </svg>
+
+                              <strong class="text-gray-600">Facebook</strong>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-gray-200 text-sm rounded-md mr-2" style="padding: 2px;">
+                                smsMail
+                            </div>
+                            <strong class="text-md text-gray-600">Lorem ipsum dolor dolordolor dolordolor dolor dolor sit. </strong>
+                            <span class="text-gray-500 text-md"> - Lorem  ipsum dolor ...</span>
+                        </div>
+                        <div class="">
+                            <strong class="text-sm text-gray-800">22:36</strong>
+                        </div>
+                    </div>
+
+                    <hr class="bg-gray-300">
+
+                    <div class="flex justify-between items-center py-3 px-3">
+                        <div class="flex items-center space-x-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" stroke="gray" class="bi bi-square" viewBox="0 0 16 16">
+                                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                              </svg> 
+
+                              <svg class="w-6 h-6" fill="none" stroke="lightgray" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="" stroke-linejoin="" stroke-width="1.2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" stroke-width="0.1" stroke="lightgray" class="w-5 h-5 bi bi-caret-right" viewBox="0 0 16 16">
+                                <path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753l5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
+                              </svg>
+
+                              <strong class="text-gray-600">Facebook</strong>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-gray-200 text-sm rounded-md mr-2" style="padding: 2px;">
+                                smsMail
+                            </div>
+                            <strong class="text-md text-gray-600">Lorem ipsum dolor dolordolor dolordolor dolor dolor sit. </strong>
+                            <span class="text-gray-500 text-md"> - Lorem  ipsum dolor ...</span>
+                        </div>
+                        <div class="">
+                            <strong class="text-sm text-gray-800">22:36</strong>
+                        </div>
+                    </div>
+
+                    <hr class="bg-gray-300">
+
+                    
+
+                </div>
+            </div>
+            
+            <div class="p-2 flex flex-col items-center space-y-6 flex-none">
+                <div class="hover:bg-gray-200 rounded-full p-2">
+                    <img src="https://www.gstatic.com/companion/icon_assets/calendar_2020q4_2x.png" class="w-5 h-5" alt="">
+                </div>
+                <div class="hover:bg-gray-200 rounded-full p-2">
+                    <img src="https://www.gstatic.com/companion/icon_assets/keep_2020q4v3_2x.png" class="w-5 h-5" alt="">
+                </div>
+                <div class="hover:bg-gray-200 rounded-full p-2">
+                    <img src="https://www.gstatic.com/companion/icon_assets/tasks2_2x.png" class="w-5 h-5" alt="">
+                </div>
+                <div class="hover:bg-gray-200 rounded-full p-2">
+                    <img src="https://www.gstatic.com/companion/icon_assets/contacts_2x.png" class="w-5 h-5" alt="">
+                </div>
+
+                <hr class="my-3 w-full bg-gray-300">
+
+
+                <div class="hover:bg-gray-100 rounded-full p-1">
+                    <img src="https://www.gstatic.com/images/icons/material/system/1x/add_grey600_24dp.png" class="w-5 h-5" alt="">
+                </div>
+
+
+                
+
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>
